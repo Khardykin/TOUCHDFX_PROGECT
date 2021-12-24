@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.18.0">
+  <Texts>
+    <Text Id="ResourceId12" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId1" TypographyId="Default" Alignment="Left" Direction="RTL">
+      <Translation Language="GB">AS</Translation>
+    </Text>
+    <Text Id="ResourceId2" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Фsd</Translation>
+    </Text>
+    <Text Id="ResourceId3" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId13" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId4" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">EN</Translation>
+    </Text>
+    <Text Id="ResourceId14" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId5" TypographyId="Small" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">CLOSE</Translation>
+    </Text>
+    <Text Id="__SingleUse_DBNX" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">CAPS &#10;LOCK&#10;&#10;</Translation>
+    </Text>
+    <Text Id="__SingleUse_CLAL" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">ENTER&#10;</Translation>
+    </Text>
+    <Text Id="__SingleUse_HLSL" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Delete all</Translation>
+    </Text>
+    <Text Id="__SingleUse_K2XR" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Backspace</Translation>
+    </Text>
+    <Text Id="ResourceId15" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId6" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB" />
+    </Text>
+    <Text Id="ResourceId16" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId17" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId7" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">ABC</Translation>
+    </Text>
+    <Text Id="ResourceId8" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId18" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId10" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId11" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Q</Translation>
+    </Text>
+    <Text Id="__SingleUse_9PQ6" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">New Text</Translation>
+    </Text>
+    <Text Id="__SingleUse_TS12" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Backspace</Translation>
+    </Text>
+    <Text Id="__SingleUse_TZP8" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_D72U" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">0</Translation>
+    </Text>
+    <Text Id="__SingleUse_Z4JY" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_4UB8" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">0</Translation>
+    </Text>
+    <Text Id="__SingleUse_66SU" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Close</Translation>
+    </Text>
+    <Text Id="__SingleUse_O6I9" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">ENTER</Translation>
+    </Text>
+    <Text Id="__SingleUse_QKLS" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Сохранить &#10;настройки?</Translation>
+    </Text>
+    <Text Id="__SingleUse_XFCU" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Нет</Translation>
+    </Text>
+    <Text Id="__SingleUse_KVEN" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Да</Translation>
+    </Text>
+    <Text Id="__SingleUse_5CIK" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Сохранить настройки?</Translation>
+    </Text>
+    <Text Id="__SingleUse_L982" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_53KN" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">15</Translation>
+    </Text>
+    <Text Id="__SingleUse_LBEI" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_WIXH" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">01-01-1900 10:10</Translation>
+    </Text>
+    <Text Id="__SingleUse_DOAO" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_P13T" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Петля</Translation>
+    </Text>
+    <Text Id="__SingleUse_I04R" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_A188" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Обрыв</Translation>
+    </Text>
+    <Text Id="__SingleUse_Q6FU" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_QS1C" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">100</Translation>
+    </Text>
+    <Text Id="__SingleUse_YDSR" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_LNEH" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">LEL</Translation>
+    </Text>
+    <Text Id="__SingleUse_IJ1U" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_83ZL" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Порог 1</Translation>
+    </Text>
+    <Text Id="__SingleUse_PXKK" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_60JG" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Err</Translation>
+    </Text>
+    <Text Id="__SingleUse_JQ77" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_A04E" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">C4H12OH</Translation>
+    </Text>
+    <Text Id="__SingleUse_Z9OO" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Чтение логов</Translation>
+    </Text>
+    <Text Id="__SingleUse_IRA4" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_EGRS" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_WP7W" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_IWNN" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">1</Translation>
+    </Text>
+    <Text Id="__SingleUse_AKZM" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_G02N" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">2</Translation>
+    </Text>
+    <Text Id="__SingleUse_5HYA" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_LYTH" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">3</Translation>
+    </Text>
+    <Text Id="__SingleUse_IX3T" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_MKU4" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">4</Translation>
+    </Text>
+    <Text Id="__SingleUse_I0UZ" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_ONOL" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">5</Translation>
+    </Text>
+    <Text Id="__SingleUse_A1TC" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_UI2S" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_ZX97" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_5ZOV" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Фильтр по дате</Translation>
+    </Text>
+    <Text Id="__SingleUse_NY18" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Ok</Translation>
+    </Text>
+    <Text Id="__SingleUse_BK1O" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Exit</Translation>
+    </Text>
+    <Text Id="Settings_date_picker_text" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;text&gt;</Translation>
+    </Text>
+    <Text Id="Settings_date_picker_text_selected" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;text&gt;</Translation>
+    </Text>
+    <Text Id="asdfg" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;&gt;</Translation>
+    </Text>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="15" Bpp="4" FallbackCharacter="?" WildcardCharacterRanges="A-Z,a-z,0-9,А-Я,а-я,!-@,[-`" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" FallbackCharacter="?" WildcardCharacterRanges="A-Z,a-z,0-9,А-Я,а-я,!-@,[-`" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" FallbackCharacter="?" WildcardCharacterRanges="A-Z,a-z,0-9,А-Я,а-я,!-@,[-`" />
+  </Typographies>
+</TextDatabase>

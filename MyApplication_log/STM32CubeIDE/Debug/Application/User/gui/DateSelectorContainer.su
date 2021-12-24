@@ -1,0 +1,18 @@
+Drawable.hpp:298:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:310:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:339:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:351:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:361:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:372:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+Drawable.hpp:383:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:471:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:481:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+Drawable.hpp:568:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
+DateSelectorContainer.cpp:3:1:DateSelectorContainer::DateSelectorContainer()	16	static
+DateSelectorContainer.cpp:13:6:void DateSelectorContainer::setDate(uint16_t, uint8_t, uint8_t)	24	static
+DateSelectorContainer.cpp:25:10:uint16_t DateSelectorContainer::getYear()	8	static
+DateSelectorContainer.cpp:30:9:uint8_t DateSelectorContainer::getMonth()	8	static
+DateSelectorContainer.cpp:35:9:uint8_t DateSelectorContainer::getDay()	8	static
+DateSelectorContainer.cpp:9:1:DateSelectorContainer::~DateSelectorContainer()	8	static
+DateSelectorContainer.cpp:9:1:virtual DateSelectorContainer::~DateSelectorContainer()	8	static

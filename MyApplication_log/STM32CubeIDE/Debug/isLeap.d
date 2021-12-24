@@ -1,0 +1,1 @@
+isLeap.o: ../isLeap.c

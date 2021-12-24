@@ -1,0 +1,33 @@
+Drawable.hpp:132:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	0	static
+Drawable.hpp:298:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:310:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:339:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:351:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:361:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:372:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+Drawable.hpp:383:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:471:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:481:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+Drawable.hpp:568:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Drawable.hpp:683:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	0	static
+Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
+Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
+Callback.hpp:290:8:touchgfx::Callback<DatePicker, const WheelSelector&, const int&>::~Callback()	0	static
+Callback.hpp:318:18:void touchgfx::Callback<dest_type, T1, T2, void>::execute(T1, T2) [with dest_type = DatePicker; T1 = const WheelSelector&; T2 = const int&]	12	static
+Callback.hpp:328:18:bool touchgfx::Callback<dest_type, T1, T2, void>::isValid() const [with dest_type = DatePicker; T1 = const WheelSelector&; T2 = const int&]	0	static
+Callback.hpp:290:8:virtual touchgfx::Callback<DatePicker, const WheelSelector&, const int&>::~Callback()	8	static
+Drawable.hpp:326:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+DatePicker.cpp:6:1:DatePicker::DatePicker()	64	static
+DatePicker.cpp:110:6:void DatePicker::setDay(int, int, touchgfx::EasingEquation)	0	static
+DatePicker.cpp:115:6:void DatePicker::setMonth(int, int, touchgfx::EasingEquation)	0	static
+DatePicker.cpp:120:6:void DatePicker::setYear(int, int, touchgfx::EasingEquation)	0	static
+DatePicker.cpp:125:5:int DatePicker::getDay()	0	static
+DatePicker.cpp:130:5:int DatePicker::getMonth()	0	static
+DatePicker.cpp:135:5:int DatePicker::getYear()	0	static
+DatePicker.cpp:140:6:void DatePicker::reset()	8	static
+DatePicker.cpp:182:10:uint16_t DatePicker::getNumberOfDays(uint16_t, uint16_t)	0	static
+DatePicker.cpp:147:6:void DatePicker::selectedElementChangedHandler(const WheelSelector&, const int&)	16	static
+WheelSelector.hpp:24:7:WheelSelector::~WheelSelector()	16	static
+DatePicker.cpp:106:1:DatePicker::~DatePicker()	8	static
+DatePicker.cpp:106:1:virtual DatePicker::~DatePicker()	8	static
+WheelSelector.hpp:24:7:virtual WheelSelector::~WheelSelector()	8	static

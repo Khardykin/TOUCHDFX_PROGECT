@@ -1,0 +1,62 @@
+Drawable.hpp:132:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	0	static
+Drawable.hpp:298:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:310:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:339:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:351:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:361:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:372:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+Drawable.hpp:383:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:471:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:481:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+Drawable.hpp:568:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Drawable.hpp:683:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	0	static
+Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
+Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
+TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
+TextArea.hpp:47:18:virtual touchgfx::Rect touchgfx::TextArea::getSolidRect() const	0	static
+TextArea.hpp:114:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	16	static
+WheelSelector.hpp:24:7:WheelSelector::~WheelSelector()	16	static
+Callback.hpp:357:8:touchgfx::Callback<WheelSelector, const touchgfx::MoveAnimator<touchgfx::Container>&>::~Callback()	0	static
+FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>::~FadeAnimator()	0	static
+MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<touchgfx::Container>::~MoveAnimator()	0	static
+Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = WheelSelector; T1 = const touchgfx::MoveAnimator<touchgfx::Container>&]	8	static
+Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = WheelSelector; T1 = const touchgfx::MoveAnimator<touchgfx::Container>&]	0	static
+FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::TextAreaWithOneWildcard]	0	static
+FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::TextAreaWithOneWildcard]	0	static
+MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = touchgfx::Container]	0	static
+MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = touchgfx::Container]	0	static
+TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
+MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<touchgfx::Container>::~MoveAnimator()	8	static
+FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>::~FadeAnimator()	8	static
+Callback.hpp:357:8:virtual touchgfx::Callback<WheelSelector, const touchgfx::MoveAnimator<touchgfx::Container>&>::~Callback()	8	static
+WheelSelector.hpp:24:7:virtual WheelSelector::~WheelSelector()	8	static
+TextArea.hpp:98:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	16	static
+TextAreaWithWildcard.hpp:73:22:virtual uint16_t touchgfx::TextAreaWithOneWildcard::getTextWidth() const	32	static
+TextAreaWithWildcard.hpp:42:21:virtual int16_t touchgfx::TextAreaWithOneWildcard::getTextHeight()	16	static
+Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
+Drawable.hpp:326:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+Drawable.hpp:394:10:void touchgfx::Drawable::setWidthHeight(int16_t, int16_t)	16	static
+TextArea.hpp:42:5:touchgfx::TextArea::TextArea()	8	static
+WheelSelector.cpp:9:1:WheelSelector::WheelSelector()	40	static
+WheelSelector.cpp:17:6:void WheelSelector::setup(touchgfx::BitmapId, int, int, int, int, int, int)	48	static
+WheelSelector.cpp:50:6:void WheelSelector::addText(touchgfx::TypedTextId, touchgfx::TypedTextId, const UnicodeChar*)	56	static
+WheelSelector.cpp:79:5:int WheelSelector::getSelectedItem()	0	static
+WheelSelector.cpp:185:6:void WheelSelector::animationEndedHandler(const touchgfx::MoveAnimator<touchgfx::Container>&)	24	static
+WheelSelector.cpp:86:6:void WheelSelector::reset()	8	static
+WheelSelector.cpp:223:5:int WheelSelector::calculateSnapPosition(int)	8	static
+WheelSelector.cpp:237:5:int WheelSelector::getTextContainerVisibleHeight()	0	static
+WheelSelector.cpp:203:6:void WheelSelector::adjustForBoundaries(int&)	8	static
+WheelSelector.cpp:195:6:void WheelSelector::moveText(int)	16	static
+WheelSelector.cpp:137:6:virtual void WheelSelector::handleDragEvent(const touchgfx::DragEvent&)	0	static
+MoveAnimator.hpp:159:10:void touchgfx::MoveAnimator<T>::cancelMoveAnimation() [with T = touchgfx::Container]	8	static
+FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::TextAreaWithOneWildcard]	16	static
+FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::TextAreaWithOneWildcard]	8	static
+FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::TextAreaWithOneWildcard]	24	static
+WheelSelector.cpp:162:6:void WheelSelector::hideBottomElements(int)	32	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = touchgfx::Container]	24	static
+MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = touchgfx::Container]	8	static
+WheelSelector.cpp:217:6:void WheelSelector::animateMoveText(int, int, touchgfx::EasingEquation)	32	static
+WheelSelector.cpp:72:6:void WheelSelector::setSelectedItem(int, int, touchgfx::EasingEquation)	16	static
+WheelSelector.cpp:143:6:virtual void WheelSelector::handleGestureEvent(const touchgfx::GestureEvent&)	16	static
+WheelSelector.cpp:230:6:void WheelSelector::snap()	8	static
+WheelSelector.cpp:93:6:virtual void WheelSelector::handleClickEvent(const touchgfx::ClickEvent&)	16	static

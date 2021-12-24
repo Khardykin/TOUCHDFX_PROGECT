@@ -1,0 +1,9 @@
+parce_archiv.c:48:6:write_archiv	0	static
+parce_archiv.c:113:10:parce_archive	0	static
+parce_archiv.c:201:6:writing_found_logs	0	static
+parce_archiv.c:262:9:parce_found_logs	0	static
+parce_archiv.c:294:6:init_write_state_file_archiv	0	static
+parce_archiv.c:320:10:open_read_state_file_archiv	0	static
+parce_archiv.c:349:6:read_start_stop_state_archiv	0	static
+parce_archiv.c:357:6:clear_file_with_found_log	0	static
+parce_archiv.c:366:10:recording_of_logs_found_by_the_filter_to_file	0	static
