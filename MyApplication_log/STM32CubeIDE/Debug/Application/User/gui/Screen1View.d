@@ -1,5 +1,5 @@
 Application/User/gui/Screen1View.o: \
- C:/TouchGFXProjects/MyApplication_log/TouchGFX/gui/src/screen1_screen/Screen1View.cpp \
+ C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/TouchGFX/gui/src/screen1_screen/Screen1View.cpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
@@ -73,13 +73,19 @@ Application/User/gui/Screen1View.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../../TouchGFX/gui/include/gui/containers/CustomContainerScrollList.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerScrollListBase.hpp \
  ../../TouchGFX/gui/include/gui/settings_screen/DateSelectorContainer.hpp \
  ../../TouchGFX/generated/images/include/BitmapDatabase.hpp \
  ../../TouchGFX/gui/include/gui/settings_screen/DatePicker.hpp \
  ../../TouchGFX/gui/include/gui/settings_screen/WheelSelector.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  ../../Core/Inc/time.h
@@ -230,6 +236,20 @@ Application/User/gui/Screen1View.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+
+../../TouchGFX/gui/include/gui/containers/CustomContainerScrollList.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerScrollListBase.hpp:
+
 ../../TouchGFX/gui/include/gui/settings_screen/DateSelectorContainer.hpp:
 
 ../../TouchGFX/generated/images/include/BitmapDatabase.hpp:
@@ -241,8 +261,6 @@ Application/User/gui/Screen1View.o: \
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
 

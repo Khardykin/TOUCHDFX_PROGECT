@@ -175,9 +175,9 @@
             "Type": "FlexButton",
             "Name": "flexButtonFilterData",
             "X": 32,
-            "Y": 157,
+            "Y": 141,
             "Width": 150,
-            "Height": 35,
+            "Height": 59,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -187,7 +187,14 @@
                 "TextId": "__SingleUse_ZX97",
                 "TextRotation": "0",
                 "Wildcard1": {
-                  "TextId": "__SingleUse_5ZOV"
+                  "TextId": "__SingleUse_5ZOV",
+                  "UseBuffer": true,
+                  "BufferSize": 11
+                },
+                "Wildcard2": {
+                  "TextId": "__SingleUse_W7NB",
+                  "UseBuffer": true,
+                  "BufferSize": 11
                 },
                 "ColorReleased": {
                   "Red": 10,
@@ -203,9 +210,9 @@
               {
                 "Type": "BoxWithBorderButtonStyle",
                 "Width": 150,
-                "Height": 35,
+                "Height": 59,
                 "LockToFlexButtonSize": true,
-                "BorderSize": 1,
+                "BorderSize": 2,
                 "ColorReleased": {
                   "Green": 102,
                   "Blue": 153
@@ -753,43 +760,63 @@
                 ]
               },
               {
-                "Type": "FlexButton",
-                "Name": "flexButton1",
-                "X": 375,
-                "Y": 221,
-                "Width": 71,
-                "Height": 31,
-                "ButtonTrigger": {
-                  "Type": "ClickButtonTrigger"
-                },
-                "ButtonStyles": [
-                  {
-                    "Type": "BoxWithBorderButtonStyle",
-                    "Width": 71,
-                    "Height": 31,
-                    "LockToFlexButtonSize": true,
-                    "BorderSize": 5,
-                    "ColorReleased": {
-                      "Green": 102,
-                      "Blue": 153
-                    },
-                    "ColorPressed": {
-                      "Green": 153,
-                      "Blue": 204
-                    },
-                    "ColorBorderReleased": {
-                      "Green": 7,
-                      "Blue": 102
-                    },
-                    "ColorBorderPressed": {
-                      "Red": 51,
-                      "Green": 102,
-                      "Blue": 153
-                    }
-                  }
-                ]
+                "Type": "TextArea",
+                "Name": "textAreaDataStart",
+                "X": 80,
+                "Y": 25,
+                "Width": 76,
+                "Height": 19,
+                "TextId": "__SingleUse_A8GK",
+                "TextRotation": "0",
+                "AutoSize": true,
+                "Wildcard1": {
+                  "TextId": "__SingleUse_68K3",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textAreaDataStop",
+                "X": 330,
+                "Y": 25,
+                "Width": 73,
+                "Height": 19,
+                "TextId": "__SingleUse_01JS",
+                "TextRotation": "0",
+                "AutoSize": true,
+                "Wildcard1": {
+                  "TextId": "__SingleUse_EEOS",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               }
             ]
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "X": 407,
+            "Y": 25,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ScrollList",
+            "Name": "scrollList1",
+            "X": 335,
+            "Y": 14,
+            "Width": 50,
+            "Height": 186,
+            "ItemTemplateName": "CustomContainerScrollList",
+            "NumberofItems": 5,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0
           }
         ],
         "Interactions": [
@@ -3597,6 +3624,69 @@
           }
         ],
         "Interactions": []
+      },
+      {
+        "Name": "CustomContainerScrollList",
+        "Width": 50,
+        "Height": 20,
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "Width": 50,
+            "Height": 20,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "TextId": "__SingleUse_Z0OO",
+                "TextRotation": "0",
+                "Wildcard1": {
+                  "TextId": "__SingleUse_CAOO",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                },
+                "ColorReleased": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "ColorPressed": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                }
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 50,
+                "Height": 20,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 1,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": []
       }
     ],
     "Name": "MyApplication_log",
@@ -3648,6 +3738,6 @@
     "DisplayOrientation": "Landscape",
     "Family": "STM32F4"
   },
-  "Version": "4.18.0",
+  "Version": "4.18.1",
   "CreatedBy": "4.18.0"
 }

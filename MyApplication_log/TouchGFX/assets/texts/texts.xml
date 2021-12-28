@@ -200,10 +200,10 @@
       <Translation Language="GB">&gt;</Translation>
     </Text>
     <Text Id="__SingleUse_ZX97" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">&lt;value&gt;</Translation>
+      <Translation Language="GB">Filter data&#10;&lt;value&gt;&#10;&lt;value&gt;</Translation>
     </Text>
     <Text Id="__SingleUse_5ZOV" TypographyId="Default" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">Фильтр по дате</Translation>
+      <Translation Language="GB">01-01-1900</Translation>
     </Text>
     <Text Id="__SingleUse_NY18" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">Ok</Translation>
@@ -219,6 +219,27 @@
     </Text>
     <Text Id="asdfg" TypographyId="Default" Alignment="Left" Direction="LTR">
       <Translation Language="GB">&lt;&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_W7NB" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">01-01-1900</Translation>
+    </Text>
+    <Text Id="__SingleUse_A8GK" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_68K3" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Data start</Translation>
+    </Text>
+    <Text Id="__SingleUse_01JS" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_EEOS" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Data stop</Translation>
+    </Text>
+    <Text Id="__SingleUse_Z0OO" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_CAOO" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">1</Translation>
     </Text>
   </Texts>
   <Typographies>

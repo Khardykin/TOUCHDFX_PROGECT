@@ -1,7 +1,7 @@
 Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.o: \
- C:/TouchGFXProjects/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.c \
- C:/TouchGFXProjects/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h \
- C:/TouchGFXProjects/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h \
+ C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.c \
+ C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h \
+ C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -40,12 +40,12 @@ Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h \
- c:\touchgfxprojects\myapplication_log\drivers\bsp\components\ft6x06\ft6x06.h \
- c:\touchgfxprojects\myapplication_log\drivers\bsp\components\common\ts.h
+ c:\touchgfxprojects\touchdfx_progect\myapplication_log\drivers\bsp\components\ft6x06\ft6x06.h \
+ c:\touchgfxprojects\touchdfx_progect\myapplication_log\drivers\bsp\components\common\ts.h
 
-C:/TouchGFXProjects/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h:
+C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h:
 
-C:/TouchGFXProjects/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h:
+C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 
@@ -123,6 +123,6 @@ C:/TouchGFXProjects/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h:
 
-c:\touchgfxprojects\myapplication_log\drivers\bsp\components\ft6x06\ft6x06.h:
+c:\touchgfxprojects\touchdfx_progect\myapplication_log\drivers\bsp\components\ft6x06\ft6x06.h:
 
-c:\touchgfxprojects\myapplication_log\drivers\bsp\components\common\ts.h:
+c:\touchgfxprojects\touchdfx_progect\myapplication_log\drivers\bsp\components\common\ts.h:

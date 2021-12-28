@@ -303,6 +303,12 @@
     <ClCompile Include="..\..\gui\src\settings_screen\WheelSelector.cpp">
       <Filter>Source Files\gui\settings_screen</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\CustomContainerScrollList.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainerScrollListBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml">
@@ -801,6 +807,12 @@
     </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\settings_screen\WheelSelector.hpp">
       <Filter>Header Files\gui\settings_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\CustomContainerScrollList.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainerScrollListBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

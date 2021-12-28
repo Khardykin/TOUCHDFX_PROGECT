@@ -15,6 +15,10 @@
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/containers/ModalWindow.hpp>
 #include <touchgfx/Color.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
+#include <touchgfx/containers/scrollers/ScrollList.hpp>
+#include <gui/containers/CustomContainerScrollList.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -22,6 +26,11 @@ public:
     Screen1ViewBase();
     virtual ~Screen1ViewBase() {}
     virtual void setupScreen();
+
+    virtual void scrollList1UpdateItem(CustomContainerScrollList& item, int16_t itemIndex)
+    {
+        // Override and implement this function in Screen1
+    }
 
     /*
      * Virtual Action Handlers
@@ -99,7 +108,7 @@ protected:
     CustomContainerTableLog customContainerTableLog_9;
     touchgfx::Button button1;
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonReadLog;
-    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterData;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterData;
     touchgfx::ListLayout listLayoutPageButton;
     touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonPageBack;
     touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonPage_1;
@@ -111,11 +120,23 @@ protected:
     touchgfx::ModalWindow modalWindow1;
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonOkFilDataTime;
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonExitFilDataTime;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1;
+    touchgfx::TextAreaWithOneWildcard textAreaDataStart;
+    touchgfx::TextAreaWithOneWildcard textAreaDataStop;
+    touchgfx::ToggleButton toggleButton1;
+    touchgfx::ScrollList scrollList1;
+    touchgfx::DrawableListItems<CustomContainerScrollList, 11> scrollList1ListItems;
 
     /*
      * Wildcard Buffers
      */
+    static const uint16_t TEXTAREADATASTART_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textAreaDataStartBuffer[TEXTAREADATASTART_SIZE];
+    static const uint16_t TEXTAREADATASTOP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textAreaDataStopBuffer[TEXTAREADATASTOP_SIZE];
+    static const uint16_t FLEXBUTTONFILTERDATABUFFER1_SIZE = 11;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterDataBuffer1[FLEXBUTTONFILTERDATABUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERDATABUFFER2_SIZE = 11;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterDataBuffer2[FLEXBUTTONFILTERDATABUFFER2_SIZE];
     static const uint16_t FLEXBUTTONPAGEBACK_SIZE = 10;
     touchgfx::Unicode::UnicodeChar flexButtonPageBackBuffer[FLEXBUTTONPAGEBACK_SIZE];
     static const uint16_t FLEXBUTTONPAGE_1_SIZE = 10;
@@ -138,12 +159,14 @@ private:
      */
     touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButton&> buttonCallback;
     touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+    touchgfx::Callback<Screen1ViewBase, touchgfx::DrawableListItemsInterface*, int16_t, int16_t> updateItemCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
     void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
+    void updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex);
 
 };
 

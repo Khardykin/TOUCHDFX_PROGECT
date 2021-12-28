@@ -1,5 +1,5 @@
 Application/User/gui/DatePicker.o: \
- C:/TouchGFXProjects/MyApplication_log/TouchGFX/gui/src/settings_screen/DatePicker.cpp \
+ C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/TouchGFX/gui/src/settings_screen/DatePicker.cpp \
  ../../TouchGFX/gui/include/gui/settings_screen/DatePicker.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

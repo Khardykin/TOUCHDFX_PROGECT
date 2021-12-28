@@ -40,6 +40,8 @@
     <ClCompile Include="..\..\gui\src\settings_screen\DatePicker.cpp"/>
     <ClCompile Include="..\..\gui\src\settings_screen\DateSelectorContainer.cpp"/>
     <ClCompile Include="..\..\gui\src\settings_screen\WheelSelector.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\CustomContainerScrollList.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainerScrollListBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -209,6 +211,8 @@
     <ClInclude Include="..\..\gui\include\gui\settings_screen\DatePicker.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\settings_screen\DateSelectorContainer.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\settings_screen\WheelSelector.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\CustomContainerScrollList.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainerScrollListBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

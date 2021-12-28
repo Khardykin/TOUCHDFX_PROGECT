@@ -1,5 +1,5 @@
 Application/User/generated/CustomContainerTableLogBase.o: \
- C:/TouchGFXProjects/MyApplication_log/TouchGFX/generated/gui_generated/src/containers/CustomContainerTableLogBase.cpp \
+ C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/TouchGFX/generated/gui_generated/src/containers/CustomContainerTableLogBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerTableLogBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

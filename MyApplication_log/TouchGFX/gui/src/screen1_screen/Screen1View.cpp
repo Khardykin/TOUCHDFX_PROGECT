@@ -20,7 +20,7 @@ void Screen1View::setupScreen()
     touchgfx_printf("setupScreen");
 
     read_start_stop_state_archiv(&time_start_fil, &time_stop_fil);
-
+    scrollList1ListItems.element[0].initialize();
     time_stop_fil = 1735039935;
     time_start_fil = time_stop_fil;
     tmp = time_stop_fil;
@@ -44,6 +44,8 @@ void Screen1View::tearDownScreen()
     Screen1ViewBase::tearDownScreen();
 }
 
+//=================================================================================================
+// Переключение страниц
 void Screen1View::functionReadLog()
 {
 	current_button_table = 1;
@@ -259,21 +261,24 @@ void Screen1View::PageRefresh()
 	invalidate();
 }
 
+//=================================================================================================
+// Фильтр по дате
 void Screen1View::functionOkFilDataTime(void)
 {
 	static struct tm timeptr1;
-	static struct tm timeptr2;
 	timeptr1.tm_year = dateSelectorContainerStart.getYear();
 	timeptr1.tm_mon 	= dateSelectorContainerStart.getMonth();
 	timeptr1.tm_mday = dateSelectorContainerStart.getDay();
+	Unicode::snprintf(flexButtonFilterDataBuffer1, FLEXBUTTONFILTERDATABUFFER1_SIZE, "%.2d-%.2d-%4d", timeptr1.tm_mday, timeptr1.tm_mon, timeptr1.tm_year + 1900);
 	time_start_fil 	= (uint32_t)mktime(&timeptr1);
-	timeptr2.tm_year = dateSelectorContainerStop.getYear();
-	timeptr2.tm_mon 	= dateSelectorContainerStop.getMonth();
-	timeptr2.tm_mday = dateSelectorContainerStop.getDay();
-	time_stop_fil 	= (uint32_t)mktime(&timeptr2);
+	timeptr1.tm_year = dateSelectorContainerStop.getYear();
+	timeptr1.tm_mon 	= dateSelectorContainerStop.getMonth();
+	timeptr1.tm_mday = dateSelectorContainerStop.getDay();
+	Unicode::snprintf(flexButtonFilterDataBuffer2, FLEXBUTTONFILTERDATABUFFER2_SIZE, "%.2d-%.2d-%4d", timeptr1.tm_mday, timeptr1.tm_mon, timeptr1.tm_year + 1900);
+	time_stop_fil 	= (uint32_t)mktime(&timeptr1);
 
 	modalWindow1.setVisible(false);
-	modalWindow1.invalidate();
+	invalidate();
 }
 
 void Screen1View::functionFilterData(void)
@@ -288,5 +293,5 @@ void Screen1View::functionFilterData(void)
 
 
 	modalWindow1.setVisible(true);
-	modalWindow1.invalidate();
+	invalidate();
 }

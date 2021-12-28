@@ -43,9 +43,16 @@ gmtime_r(const time_p * timer, struct tm * timeptr)
     div_t           result;
     uint16_t        days, n, leapyear, years;
 
+    time_p timer1 = *timer;
+    if(timer1 < UNIX_OFFSET){
+    	timer1 = UNIX_OFFSET;
+    }
+    else{
+    	timer1 = timer1 - UNIX_OFFSET;
+    }
     /* break down timer into whole and fractional parts of 1 day */
-    days = *timer / 86400UL;
-    fract = *timer % 86400UL;
+    days = timer1 / 86400UL;
+    fract = timer1 % 86400UL;
 
     /*
             Extract hour, minute, and second from the fractional day

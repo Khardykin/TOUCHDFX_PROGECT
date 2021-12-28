@@ -1,5 +1,5 @@
 Application/User/gui/WheelSelector.o: \
- C:/TouchGFXProjects/MyApplication_log/TouchGFX/gui/src/settings_screen/WheelSelector.cpp \
+ C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/TouchGFX/gui/src/settings_screen/WheelSelector.cpp \
  ../../TouchGFX/gui/include/gui/settings_screen/WheelSelector.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

@@ -1,6 +1,6 @@
 Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_sdram.o: \
- C:/TouchGFXProjects/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_sdram.c \
- C:/TouchGFXProjects/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_sdram.h \
+ C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_sdram.c \
+ C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_sdram.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -40,7 +40,7 @@ Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_sdram.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h
 
-C:/TouchGFXProjects/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_sdram.h:
+C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_sdram.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 

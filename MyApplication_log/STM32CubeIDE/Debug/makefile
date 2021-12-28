@@ -86,8 +86,8 @@ all: main-build
 main-build: STM32F469I-DISCO.elf secondary-outputs
 
 # Tool invocations
-STM32F469I-DISCO.elf: $(OBJS) $(USER_OBJS) C:\TouchGFXProjects\MyApplication_log\STM32CubeIDE\STM32F469NIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32F469I-DISCO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\TouchGFXProjects\MyApplication_log\STM32CubeIDE\STM32F469NIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F469I-DISCO.map" -Wl,--gc-sections -static -LC:/git/STM32F469-dk/stm32f469i_disco/STM32F469I-DISCO/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -LC:/git/stm32f469i_disco/STM32F469I-DISCO/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -LC:/TouchGFXProjects/MyApplication_log/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+STM32F469I-DISCO.elf: $(OBJS) $(USER_OBJS) C:\TouchGFXProjects\TOUCHDFX_PROGECT\MyApplication_log\STM32CubeIDE\STM32F469NIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "STM32F469I-DISCO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\TouchGFXProjects\TOUCHDFX_PROGECT\MyApplication_log\STM32CubeIDE\STM32F469NIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F469I-DISCO.map" -Wl,--gc-sections -static -LC:/git/STM32F469-dk/stm32f469i_disco/STM32F469I-DISCO/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -LC:/git/stm32f469i_disco/STM32F469I-DISCO/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -LC:/TouchGFXProjects/MyApplication_log/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -LC:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

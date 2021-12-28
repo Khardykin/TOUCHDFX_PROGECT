@@ -109,5 +109,5 @@ mk_gmtime(const struct tm * timeptr)
 
     ret += tmp;
 
-    return ret;
+    return ret + UNIX_OFFSET;
 }
