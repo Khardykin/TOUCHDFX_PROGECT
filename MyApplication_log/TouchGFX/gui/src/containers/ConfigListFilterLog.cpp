@@ -178,7 +178,6 @@ void ConfigListFilterLog::scrollListItemSelectedHandler(int16_t itemSelected)
 		}
 		else{
 			currentIndex = 0;
-			SETBIT(currentIndex, itemSelected);
 		}
 	}
 

@@ -35,25 +35,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
  15 TextFlashSection 000004ec  90125bbc  90125bbc  00175bbc  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 16 .debug_line   0008afc6  00000000  00000000  001760d8  2**0
+ 16 .debug_line   0008afbf  00000000  00000000  001760d8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_info   001ed7f2  00000000  00000000  0020109e  2**0
+ 17 .debug_info   001ed7f3  00000000  00000000  00201097  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_abbrev 00022a5e  00000000  00000000  003ee890  2**0
+ 18 .debug_abbrev 00022a5e  00000000  00000000  003ee88a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_aranges 00004278  00000000  00000000  004112f0  2**3
+ 19 .debug_aranges 00004278  00000000  00000000  004112e8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    0013ee59  00000000  00000000  00415568  2**0
+ 20 .debug_str    0013ee59  00000000  00000000  00415560  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_ranges 0000b548  00000000  00000000  005543c8  2**3
+ 21 .debug_ranges 0000b548  00000000  00000000  005543c0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_loc    0009c528  00000000  00000000  0055f910  2**0
+ 22 .debug_loc    0009c528  00000000  00000000  0055f908  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_macro  0003f969  00000000  00000000  005fbe38  2**0
+ 23 .debug_macro  0003f969  00000000  00000000  005fbe30  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .comment      000000d2  00000000  00000000  0063b7a1  2**0
+ 24 .comment      000000d2  00000000  00000000  0063b799  2**0
                   CONTENTS, READONLY
- 25 .debug_frame  0000bedc  00000000  00000000  0063b874  2**2
+ 25 .debug_frame  0000bedc  00000000  00000000  0063b86c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -17268,7 +17268,8 @@ void ConfigListFilterLog::setViewCallback(GenericCallback<uint8_t, ConfigListFil
  8007b32:	2d1f      	cmp	r5, #31
  8007b34:	dc06      	bgt.n	8007b44 <_ZN19ConfigListFilterLog29scrollListItemSelectedHandlerEs+0x28>
 			if(TESTBIT(currentIndex, itemSelected)){
- 8007b36:	58e2      	ldr	r2, [r4, r3]
+ 8007b36:	58c2      	ldr	r2, [r0, r3]
+			if(TESTBIT(currentIndex, itemSelected)){
  8007b38:	40a9      	lsls	r1, r5
  8007b3a:	420a      	tst	r2, r1
 				CLRBIT(currentIndex, itemSelected);
@@ -17279,10 +17280,10 @@ void ConfigListFilterLog::setViewCallback(GenericCallback<uint8_t, ConfigListFil
  8007b42:	e000      	b.n	8007b46 <_ZN19ConfigListFilterLog29scrollListItemSelectedHandlerEs+0x2a>
 			currentIndex = 0;
  8007b44:	2200      	movs	r2, #0
-				SETBIT(currentIndex, itemSelected);
- 8007b46:	50e2      	str	r2, [r4, r3]
 		if((currentIndex & (1 << scrollListListItems[i].getIndex()))){
- 8007b48:	f504 5880 	add.w	r8, r4, #4096	; 0x1000
+ 8007b46:	f504 5880 	add.w	r8, r4, #4096	; 0x1000
+				SETBIT(currentIndex, itemSelected);
+ 8007b4a:	50e2      	str	r2, [r4, r3]
 {
  8007b4c:	2600      	movs	r6, #0
 		if((currentIndex & (1 << scrollListListItems[i].getIndex()))){
@@ -17328,12 +17329,12 @@ void ConfigListFilterLog::setViewCallback(GenericCallback<uint8_t, ConfigListFil
  8007bac:	3601      	adds	r6, #1
  8007bae:	e7d0      	b.n	8007b52 <_ZN19ConfigListFilterLog29scrollListItemSelectedHandlerEs+0x36>
 		if(itemSelected){
- 8007bb0:	2101      	movs	r1, #1
- 8007bb2:	2d00      	cmp	r5, #0
- 8007bb4:	d1bf      	bne.n	8007b36 <_ZN19ConfigListFilterLog29scrollListItemSelectedHandlerEs+0x1a>
-			SETBIT(currentIndex, itemSelected);
- 8007bb6:	50c1      	str	r1, [r0, r3]
- 8007bb8:	e7c6      	b.n	8007b48 <_ZN19ConfigListFilterLog29scrollListItemSelectedHandlerEs+0x2c>
+ 8007bb0:	2d00      	cmp	r5, #0
+ 8007bb2:	d0c7      	beq.n	8007b44 <_ZN19ConfigListFilterLog29scrollListItemSelectedHandlerEs+0x28>
+			if(TESTBIT(currentIndex, itemSelected)){
+ 8007bb4:	58c2      	ldr	r2, [r0, r3]
+ 8007bb6:	2101      	movs	r1, #1
+ 8007bb8:	e7be      	b.n	8007b38 <_ZN19ConfigListFilterLog29scrollListItemSelectedHandlerEs+0x1c>
 			scrollListListItems[i].setUnselected();
  8007bba:	f7ff ff9b 	bl	8007af4 <_ZN8touchgfx17DrawableListItemsI8ListTileLi16EEixEi>
  8007bbe:	f000 fe45 	bl	800884c <_ZN8ListTile13setUnselectedEv>
@@ -20060,9 +20061,9 @@ void Screen1View::handleListItemSelected(uint8_t list_item, ConfigListFilterLog*
  8008d24:	4630      	mov	r0, r6
  8008d26:	2107      	movs	r1, #7
  8008d28:	f7fe fedd 	bl	8007ae6 <_ZN19ConfigListFilterLog14setContainerIDENS_6ListIDE>
-	ListFilterLog_Num.		setHighlighted(31);
+	ListFilterLog_Num.		setHighlighted(32);
  8008d2c:	9b00      	ldr	r3, [sp, #0]
- 8008d2e:	211f      	movs	r1, #31
+ 8008d2e:	2120      	movs	r1, #32
  8008d30:	4618      	mov	r0, r3
  8008d32:	f7fe fec1 	bl	8007ab8 <_ZN19ConfigListFilterLog14setHighlightedEs>
 	ListFilterLog_TypeChan.	setHighlighted(2);

@@ -27,6 +27,6 @@ ConfigListFilterLog.cpp:30:6:void ConfigListFilterLog::setHighlighted(int16_t)	0
 ConfigListFilterLog.cpp:138:9:int16_t ConfigListFilterLog::getHeightNeeded()	8	static
 ConfigListFilterLog.cpp:143:6:void ConfigListFilterLog::resizeXY(int, int)	16	static
 ConfigListFilterLog.cpp:150:6:void ConfigListFilterLog::setContainerID(ConfigListFilterLog::ListID)	0	static
-ConfigListFilterLog.cpp:207:6:void ConfigListFilterLog::setViewCallback(touchgfx::GenericCallback<unsigned char, ConfigListFilterLog*>&)	0	static
+ConfigListFilterLog.cpp:206:6:void ConfigListFilterLog::setViewCallback(touchgfx::GenericCallback<unsigned char, ConfigListFilterLog*>&)	0	static
 DrawableList.hpp:95:11:TYPE& touchgfx::DrawableListItems<TYPE, SIZE>::operator[](int) [with TYPE = ListTile; int SIZE = 16]	8	static
 ConfigListFilterLog.cpp:155:6:void ConfigListFilterLog::scrollListItemSelectedHandler(int16_t)	32	static
