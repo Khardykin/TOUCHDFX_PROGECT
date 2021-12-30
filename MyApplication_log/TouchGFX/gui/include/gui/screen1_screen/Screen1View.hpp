@@ -31,10 +31,21 @@ public:
 
 	void functionOkFilDataTime(void);
 
-	void functionFilterData(void);
+	void functionFilterDate(void);
+	void functionFilterNum(void);
+	void functionFilterTypeChannel(void);
+	void functionFilterStLoop(void);
+	void functionFilterUnit(void);
+	void functionFilterThreshold(void);
+	void functionFilterErr(void);
+	void functionFilterGas(void);
 
+
+	void handleListItemSelected(uint8_t list_item, ConfigListFilterLog* list);
 
 protected:
+
+	Callback<Screen1View, uint8_t, ConfigListFilterLog*> CallbackListItemSelected;
 
 	DateSelectorContainer dateSelectorContainerStart;
 	DateSelectorContainer dateSelectorContainerStop;
@@ -52,12 +63,12 @@ protected:
 	uint32_t time_stop_fil;
 	uint16_t position;
 
-	uint8_t channel_num_fil;
+	uint32_t channel_num_fil;
+	uint8_t ch_type_fil;
 	uint8_t loop_state_fil;
+	uint8_t units_fil;
 	uint8_t thld_state_fil;
 	uint16_t err_state_fil;
-	uint8_t ch_type_fil;
-	uint8_t units_fil;
 	uint8_t formula_fil;
 
 	TileInfoTypeDef 		*Event_log_readings_ptr 	= (TileInfoTypeDef*)data_log;

@@ -1,0 +1,5 @@
+UserUtils.hpp:22:13:UserUtils::~UserUtils()	0	static
+UserUtils.cpp:22:6:virtual void UserUtils::gasNameFromFormula(touchgfx::Unicode::UnicodeChar*, touchgfx::Unicode::UnicodeChar*)	120	static
+UserUtils.hpp:22:13:virtual UserUtils::~UserUtils()	8	static
+UserUtils.cpp:45:6:virtual void UserUtils::getBufferToDisplay(touchgfx::Unicode::UnicodeChar*, float, uint8_t)	16	static
+UserUtils.cpp:17:1:UserUtils::UserUtils()	0	static

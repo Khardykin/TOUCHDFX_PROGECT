@@ -234,12 +234,6 @@
     <ClCompile Include="$(ApplicationRoot)\generated\simulator\src\mainBase.cpp">
       <Filter>Source Files\generated\simulator</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\CustomContainer1.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainer1Base.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\gui\src\containers\CustomContainerButton_key.cpp">
       <Filter>Source Files\gui\containers</Filter>
     </ClCompile>
@@ -303,11 +297,23 @@
     <ClCompile Include="..\..\gui\src\settings_screen\WheelSelector.cpp">
       <Filter>Source Files\gui\settings_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\CustomContainerScrollList.cpp">
+    <ClCompile Include="..\..\gui\src\containers\ConfigListFilterLog.cpp">
       <Filter>Source Files\gui\containers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainerScrollListBase.cpp">
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\ConfigListFilterLogBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\ListTile.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\ListTileBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\common\ChannelInfo.cpp">
+      <Filter>Source Files\gui\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\common\UserUtils.cpp">
+      <Filter>Source Files\gui\common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -721,12 +727,6 @@
     <ClInclude Include="$(ApplicationRoot)\generated\simulator\include\simulator\mainBase.hpp">
       <Filter>Header Files\generated\simulator</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\CustomContainer1.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainer1Base.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\containers\CustomContainerButton_key.hpp">
       <Filter>Header Files\gui\containers</Filter>
     </ClInclude>
@@ -808,11 +808,23 @@
     <ClInclude Include="..\..\gui\include\gui\settings_screen\WheelSelector.hpp">
       <Filter>Header Files\gui\settings_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\CustomContainerScrollList.hpp">
+    <ClInclude Include="..\..\gui\include\gui\containers\ConfigListFilterLog.hpp">
       <Filter>Header Files\gui\containers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainerScrollListBase.hpp">
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ConfigListFilterLogBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\ListTile.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ListTileBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\ChannelInfo.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\UserUtils.hpp">
+      <Filter>Header Files\gui\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

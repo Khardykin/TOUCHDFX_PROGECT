@@ -17,8 +17,6 @@
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\hal\simulator\sdl2\OSWrappers.cpp"/>
     <ClCompile Include="$(ApplicationRoot)\simulator\main.cpp"/>
     <ClCompile Include="$(ApplicationRoot)\generated\simulator\src\mainBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\containers\CustomContainer1.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainer1Base.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\CustomContainerButton_key.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainerButton_keyBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\CustomContainerKeyboard.cpp"/>
@@ -40,8 +38,12 @@
     <ClCompile Include="..\..\gui\src\settings_screen\DatePicker.cpp"/>
     <ClCompile Include="..\..\gui\src\settings_screen\DateSelectorContainer.cpp"/>
     <ClCompile Include="..\..\gui\src\settings_screen\WheelSelector.cpp"/>
-    <ClCompile Include="..\..\gui\src\containers\CustomContainerScrollList.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainerScrollListBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\ConfigListFilterLog.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\ConfigListFilterLogBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\ListTile.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\ListTileBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\common\ChannelInfo.cpp"/>
+    <ClCompile Include="..\..\gui\src\common\UserUtils.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -182,8 +184,6 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\TouchArea.hpp"/>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\Widget.hpp"/>
     <ClInclude Include="$(ApplicationRoot)\generated\simulator\include\simulator\mainBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\containers\CustomContainer1.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainer1Base.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\CustomContainerButton_key.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainerButton_keyBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\CustomContainerKeyboard.hpp"/>
@@ -211,8 +211,12 @@
     <ClInclude Include="..\..\gui\include\gui\settings_screen\DatePicker.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\settings_screen\DateSelectorContainer.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\settings_screen\WheelSelector.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\containers\CustomContainerScrollList.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainerScrollListBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\ConfigListFilterLog.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ConfigListFilterLogBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\ListTile.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ListTileBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\common\ChannelInfo.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\common\UserUtils.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

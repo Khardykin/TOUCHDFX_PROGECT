@@ -1,0 +1,25 @@
+Drawable.hpp:132:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	0	static
+Drawable.hpp:298:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:310:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:339:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:351:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:361:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:372:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+Drawable.hpp:383:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:471:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:481:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+Drawable.hpp:568:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Drawable.hpp:683:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	0	static
+Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
+Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
+TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
+ListTileBase.hpp:16:13:ListTileBase::~ListTileBase()	0	static
+ListTileBase.hpp:35:18:virtual void ListTileBase::emitTrigger1Callback()	8	static
+ListTileBase.cpp:33:6:virtual void ListTileBase::initialize()	0	static
+TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
+ListTileBase.hpp:16:13:virtual ListTileBase::~ListTileBase()	8	static
+Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
+Drawable.hpp:326:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+Drawable.hpp:394:10:void touchgfx::Drawable::setWidthHeight(int16_t, int16_t)	16	static
+Box.hpp:33:5:touchgfx::Box::Box()	8	static
+ListTileBase.cpp:8:1:ListTileBase::ListTileBase()	40	static

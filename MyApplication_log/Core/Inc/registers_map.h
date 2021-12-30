@@ -1,0 +1,64 @@
+/*
+ * registers_map.h
+ *
+ *  Created on: Oct 20, 2021
+ *      Author: me
+ */
+
+#ifndef INC_REGISTERS_MAP_H_
+#define INC_REGISTERS_MAP_H_
+
+enum hold_regs_controller_data {
+	HR_CONTROLLER_ID,	// always returns 0x1400
+	HR_SERIAL_NUMBER_HIGH,
+	HR_SERIAL_NUMBER_LOW,
+	HR_FIRMWARE_VERSION,	// 0x0114	v.0x01.0x14.0x0010
+	HR_LINK_VERSION,
+	HR_CASSETTE_ID,
+	HR_BAUDRATE,		// 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200
+	HR_CHANNELS_ON_1_16,
+	HR_CHANNELS_ON_17_32,
+	HR_CONTROLLER_DATA_SIZE
+};
+
+// access as: register + 100 * channel_number[1..32]
+enum hold_regs_channel_data
+{
+	HR_NUM,
+	HR_SERIAL_NUM_HIGH,
+	HR_SERIAL_NUM_LOW,
+	HR_SETTINGS,
+	HR_THRESHOLD_1,
+	HR_THRESHOLD_2,
+	HR_THRESHOLD_3,
+	HR_FULLSCALE,
+	HR_HYSTERESIS,
+	HR_GAS_FORMULA = 9,
+	HR_GAS_NAME = 13,
+	HR_TAG = 21,
+	HR_RESERVED = 29,
+	HR_CALIBRATION_Z,
+	HR_CALIBRATION_S,
+	HR_SERVICE_LIFE_CAL,
+	HR_SERVICE_LIFE_TOTAL,
+	HR_STATUS,
+	HR_CONCENTRATION,
+	HR_RADC,
+	HR_RCURRENT,
+	HR_RVOLTAGE,
+	HR_CHANNEL_DATA_SIZE
+};
+
+// access as: register + channel_number[1..32] - 1
+enum input_regs
+{
+	IR_CONTROLLERID,	// always returns 0x1400
+	IR_SERIAL_NUMBER_HIGH,
+	IR_SERIAL_NUMBER_LOW,
+	IR_CASSETTE_STATUS,
+	IR_CH_STATUS,
+	IR_CH_CONCENTRATION = 36,
+	IR_SIZE = 68
+};
+
+#endif /* INC_REGISTERS_MAP_H_ */

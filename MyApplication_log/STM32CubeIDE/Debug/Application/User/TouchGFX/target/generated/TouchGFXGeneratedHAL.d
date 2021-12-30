@@ -78,15 +78,16 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
+ ../../TouchGFX/gui/include/gui/containers/ConfigListFilterLog.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/ConfigListFilterLogBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
- ../../TouchGFX/gui/include/gui/containers/CustomContainerScrollList.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerScrollListBase.hpp \
+ ../../TouchGFX/gui/include/gui/containers/ListTile.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/ListTileBase.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../../TouchGFX/gui/include/gui/settings_screen/DateSelectorContainer.hpp \
  ../../TouchGFX/generated/images/include/BitmapDatabase.hpp \
  ../../TouchGFX/gui/include/gui/settings_screen/DatePicker.hpp \
@@ -298,11 +299,9 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp:
+../../TouchGFX/gui/include/gui/containers/ConfigListFilterLog.hpp:
 
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/ConfigListFilterLogBase.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp:
 
@@ -312,9 +311,13 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
 
-../../TouchGFX/gui/include/gui/containers/CustomContainerScrollList.hpp:
+../../TouchGFX/gui/include/gui/containers/ListTile.hpp:
 
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerScrollListBase.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/ListTileBase.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 
 ../../TouchGFX/gui/include/gui/settings_screen/DateSelectorContainer.hpp:
 

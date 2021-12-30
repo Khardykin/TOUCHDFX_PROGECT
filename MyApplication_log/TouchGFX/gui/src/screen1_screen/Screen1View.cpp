@@ -1,15 +1,18 @@
 #include <gui/screen1_screen/Screen1View.hpp>
 #include "touchgfx/Utils.hpp"
 
+#ifndef SIMULATOR
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <mb_regs_decoder.h>
+#endif
+
 #include "time.h"
 
-static time_p tmp;
-static struct tm timeptr;
-
-Screen1View::Screen1View()
+Screen1View::Screen1View():
+//Define the viewcallback by tying it to a handler
+CallbackListItemSelected(this, &Screen1View::handleListItemSelected)
 {
 
 }
@@ -19,8 +22,11 @@ void Screen1View::setupScreen()
     Screen1ViewBase::setupScreen();
     touchgfx_printf("setupScreen");
 
+    //----------------------------------------------------------------------
+    static time_p tmp;
+    static struct tm timeptr;
     read_start_stop_state_archiv(&time_start_fil, &time_stop_fil);
-    scrollList1ListItems.element[0].initialize();
+
     time_stop_fil = 1735039935;
     time_start_fil = time_stop_fil;
     tmp = time_stop_fil;
@@ -29,14 +35,46 @@ void Screen1View::setupScreen()
 	dateSelectorContainerStop.setDate(timeptr.tm_year, timeptr.tm_mon, timeptr.tm_mday);
 	modalWindow1.add(dateSelectorContainerStop);
 
-
     tmp = time_start_fil;
     timeptr = *gmtime(&tmp);
     dateSelectorContainerStart.setPosition(0, 50, modalWindow1.getWidth(), modalWindow1.getHeight());
     dateSelectorContainerStart.setDate(timeptr.tm_year, timeptr.tm_mon, timeptr.tm_mday);
     modalWindow1.add(dateSelectorContainerStart);
+    functionOkFilDataTime();
+    //----------------------------------------------------------------------
+    channel_num_fil = 0;
+    ch_type_fil 	= 0;
+    loop_state_fil 	= 0;
+    units_fil 		= 0;
+    thld_state_fil 	= 0;
+    err_state_fil 	= 0;
+    formula_fil 	= 0;
 
+    ListFilterLog_Num.		setViewCallback(CallbackListItemSelected);
+    ListFilterLog_TypeChan.	setViewCallback(CallbackListItemSelected);
+    ListFilterLog_StLoop.	setViewCallback(CallbackListItemSelected);
+    ListFilterLog_Unit.		setViewCallback(CallbackListItemSelected);
+    ListFilterLog_StCur.	setViewCallback(CallbackListItemSelected);
+    ListFilterLog_Err.		setViewCallback(CallbackListItemSelected);
+    ListFilterLog_Gas.		setViewCallback(CallbackListItemSelected);
+	// lists' identify
+	ListFilterLog_Num.		setContainerID(ConfigListFilterLog::ListID::list_channel);
+	ListFilterLog_TypeChan.	setContainerID(ConfigListFilterLog::ListID::list_type_channel);
+	ListFilterLog_StLoop.	setContainerID(ConfigListFilterLog::ListID::list_st_loop);
+	ListFilterLog_Unit.		setContainerID(ConfigListFilterLog::ListID::list_units);
+	ListFilterLog_StCur.	setContainerID(ConfigListFilterLog::ListID::list_st_cur);
+	ListFilterLog_Err.		setContainerID(ConfigListFilterLog::ListID::list_err);
+	ListFilterLog_Gas.		setContainerID(ConfigListFilterLog::ListID::list_formula);
 
+	ListFilterLog_Num.		setHighlighted(32);
+	ListFilterLog_TypeChan.	setHighlighted(2);
+	ListFilterLog_StLoop.	setHighlighted(0);
+	ListFilterLog_Unit.		setHighlighted(0);
+	ListFilterLog_StCur.	setHighlighted(0);
+	ListFilterLog_Err.		setHighlighted(0);
+	ListFilterLog_Gas.		setHighlighted(0);
+
+	invalidate();
 }
 
 void Screen1View::tearDownScreen()
@@ -265,24 +303,31 @@ void Screen1View::PageRefresh()
 // Фильтр по дате
 void Screen1View::functionOkFilDataTime(void)
 {
-	static struct tm timeptr1;
-	timeptr1.tm_year = dateSelectorContainerStart.getYear();
-	timeptr1.tm_mon 	= dateSelectorContainerStart.getMonth();
-	timeptr1.tm_mday = dateSelectorContainerStart.getDay();
-	Unicode::snprintf(flexButtonFilterDataBuffer1, FLEXBUTTONFILTERDATABUFFER1_SIZE, "%.2d-%.2d-%4d", timeptr1.tm_mday, timeptr1.tm_mon, timeptr1.tm_year + 1900);
-	time_start_fil 	= (uint32_t)mktime(&timeptr1);
-	timeptr1.tm_year = dateSelectorContainerStop.getYear();
-	timeptr1.tm_mon 	= dateSelectorContainerStop.getMonth();
-	timeptr1.tm_mday = dateSelectorContainerStop.getDay();
-	Unicode::snprintf(flexButtonFilterDataBuffer2, FLEXBUTTONFILTERDATABUFFER2_SIZE, "%.2d-%.2d-%4d", timeptr1.tm_mday, timeptr1.tm_mon, timeptr1.tm_year + 1900);
-	time_stop_fil 	= (uint32_t)mktime(&timeptr1);
+	static struct tm timeptrStart;
+	static struct tm timeptrStop;
+	timeptrStart.tm_year = dateSelectorContainerStart.getYear();
+	timeptrStart.tm_mon = dateSelectorContainerStart.getMonth();
+	timeptrStart.tm_mday = dateSelectorContainerStart.getDay();
+	time_start_fil 	= (uint32_t)mktime(&timeptrStart);
+	timeptrStop.tm_year = dateSelectorContainerStop.getYear();
+	timeptrStop.tm_mon 	= dateSelectorContainerStop.getMonth();
+	timeptrStop.tm_mday = dateSelectorContainerStop.getDay();
+	time_stop_fil 	= (uint32_t)mktime(&timeptrStop);
 
+	if(time_stop_fil < time_start_fil){
+		timeptrStop = timeptrStart;
+	}
+
+	Unicode::snprintf(textAreaStartDateBuffer, TEXTAREASTARTDATE_SIZE, "%.2d-%.2d-%4d", timeptrStart.tm_mday, timeptrStart.tm_mon + 1, timeptrStart.tm_year + 1900);
+	Unicode::snprintf(textAreaStopDateBuffer, TEXTAREASTOPDATE_SIZE, "%.2d-%.2d-%4d", timeptrStop.tm_mday, timeptrStop.tm_mon + 1, timeptrStop.tm_year + 1900);
 	modalWindow1.setVisible(false);
 	invalidate();
 }
 
-void Screen1View::functionFilterData(void)
+void Screen1View::functionFilterDate(void)
 {
+	static time_p tmp;
+	static struct tm timeptr;
 	tmp = time_stop_fil;
 	timeptr = *gmtime(&tmp);
 	dateSelectorContainerStop.setDate(timeptr.tm_year, timeptr.tm_mon, timeptr.tm_mday);
@@ -294,4 +339,273 @@ void Screen1View::functionFilterData(void)
 
 	modalWindow1.setVisible(true);
 	invalidate();
+}
+
+//=================================================================================================
+void Screen1View::functionFilterNum(void)
+{
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterNum;
+	ConfigListFilterLog *list = &ListFilterLog_Num;
+	if(list->isVisible() == false)
+	{
+		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
+		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
+		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->setVisible(true);
+	}
+	else{
+		list->moveTo(800, 0);
+		list->setVisible(false);
+	}
+	list->invalidate();
+	if(channel_num_fil){
+		Unicode::snprintf(flexButtonFilterNumBuffer2, FLEXBUTTONFILTERNUMBUFFER2_SIZE, "+");
+	}
+	else{
+		Unicode::snprintf(flexButtonFilterNumBuffer2, FLEXBUTTONFILTERNUMBUFFER2_SIZE, " ");
+	}
+
+}
+
+void Screen1View::functionFilterTypeChannel(void)
+{
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterTypeChannel;
+	ConfigListFilterLog *list = &ListFilterLog_TypeChan;
+	if(list->isVisible() == false)
+	{
+		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
+		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
+		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->setVisible(true);
+	}
+	else{
+		list->moveTo(800, 0);
+		list->setVisible(false);
+	}
+	list->invalidate();
+	if(ch_type_fil){
+		Unicode::snprintf(flexButtonFilterTypeChannelBuffer2, FLEXBUTTONFILTERTYPECHANNELBUFFER2_SIZE, "+");
+	}
+	else{
+		Unicode::snprintf(flexButtonFilterTypeChannelBuffer2, FLEXBUTTONFILTERTYPECHANNELBUFFER2_SIZE, " ");
+	}
+}
+
+void Screen1View::functionFilterStLoop(void)
+{
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterStLoop;
+	ConfigListFilterLog *list = &ListFilterLog_StLoop;
+	if(list->isVisible() == false)
+	{
+		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
+		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
+		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->setVisible(true);
+		list->invalidate();
+	}
+	else{
+		list->moveTo(800, 0);
+		list->setVisible(false);
+		list->invalidate();
+	}
+	if(loop_state_fil){
+		Unicode::snprintf(flexButtonFilterStLoopBuffer2, FLEXBUTTONFILTERSTLOOPBUFFER2_SIZE, "+");
+	}
+	else{
+		Unicode::snprintf(flexButtonFilterStLoopBuffer2, FLEXBUTTONFILTERSTLOOPBUFFER2_SIZE, " ");
+	}
+}
+
+void Screen1View::functionFilterUnit(void)
+{
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterUnit;
+	ConfigListFilterLog *list = &ListFilterLog_Unit;
+	if(list->isVisible() == false)
+	{
+		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
+		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
+		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->setVisible(true);
+	}
+	else{
+		list->moveTo(800, 0);
+		list->setVisible(false);
+	}
+	list->invalidate();
+	if(units_fil){
+		Unicode::snprintf(flexButtonFilterUnitBuffer2, FLEXBUTTONFILTERUNITBUFFER2_SIZE, "+");
+	}
+	else{
+		Unicode::snprintf(flexButtonFilterUnitBuffer2, FLEXBUTTONFILTERUNITBUFFER2_SIZE, " ");
+	}
+}
+
+void Screen1View::functionFilterThreshold(void)
+{
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterThreshold;
+	ConfigListFilterLog *list = &ListFilterLog_StCur;
+	if(list->isVisible() == false)
+	{
+		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
+		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
+		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->setVisible(true);
+	}
+	else{
+		list->moveTo(800, 0);
+		list->setVisible(false);
+	}
+	list->invalidate();
+	if(thld_state_fil){
+		Unicode::snprintf(flexButtonFilterThresholdBuffer2, FLEXBUTTONFILTERTHRESHOLDBUFFER2_SIZE, "+");
+	}
+	else{
+		Unicode::snprintf(flexButtonFilterThresholdBuffer2, FLEXBUTTONFILTERTHRESHOLDBUFFER2_SIZE, " ");
+	}
+}
+
+void Screen1View::functionFilterErr(void)
+{
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterErr;
+	ConfigListFilterLog *list = &ListFilterLog_Err;
+	if(list->isVisible() == false)
+	{
+		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
+		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
+		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->setVisible(true);
+	}
+	else{
+		list->moveTo(800, 0);
+		list->setVisible(false);
+	}
+	list->invalidate();
+	if(err_state_fil){
+		Unicode::snprintf(flexButtonFilterErrBuffer2, FLEXBUTTONFILTERERRBUFFER2_SIZE, "+");
+	}
+	else{
+		Unicode::snprintf(flexButtonFilterErrBuffer2, FLEXBUTTONFILTERERRBUFFER2_SIZE, " ");
+	}
+}
+
+void Screen1View::functionFilterGas(void)
+{
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterGas;
+	ConfigListFilterLog *list = &ListFilterLog_Gas;
+	if(list->isVisible() == false)
+	{
+		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
+		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
+		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->setVisible(true);
+	}
+	else{
+		list->moveTo(800, 0);
+		list->setVisible(false);
+	}
+	list->invalidate();
+	if(formula_fil){
+		Unicode::snprintf(flexButtonFilterGasBuffer2, FLEXBUTTONFILTERGASBUFFER2_SIZE, "+");
+	}
+	else{
+		Unicode::snprintf(flexButtonFilterGasBuffer2, FLEXBUTTONFILTERGASBUFFER2_SIZE, " ");
+	}
+}
+
+//=================================================================================================
+void Screen1View::handleListItemSelected(uint8_t list_item, ConfigListFilterLog* list)
+{
+	if(list == &ListFilterLog_Num){
+		if(list_item <= 31){
+			if(TESTBIT(channel_num_fil, list_item)){
+				CLRBIT(channel_num_fil, list_item);
+			}
+			else{
+				SETBIT(channel_num_fil, list_item);
+			}
+		}
+		else{
+			channel_num_fil = 0;
+		}
+	}
+	else if(list == &ListFilterLog_TypeChan){
+		if(list_item){
+			if(TESTBIT(ch_type_fil, list_item)){
+				CLRBIT(ch_type_fil, list_item);
+			}
+			else{
+				SETBIT(ch_type_fil, list_item);
+			}
+		}
+		else{
+			ch_type_fil = list_item;
+		}
+	}
+	else if(list == &ListFilterLog_StLoop){
+		if(list_item){
+			if(TESTBIT(loop_state_fil, list_item)){
+				CLRBIT(loop_state_fil, list_item);
+			}
+			else{
+				SETBIT(loop_state_fil, list_item);
+			}
+		}
+		else{
+			loop_state_fil = list_item;
+		}
+	}
+	else if(list == &ListFilterLog_Unit){
+		if(list_item){
+			if(TESTBIT(units_fil, list_item)){
+				CLRBIT(units_fil, list_item);
+			}
+			else{
+				SETBIT(units_fil, list_item);
+			}
+		}
+		else{
+			units_fil = list_item;
+		}
+	}
+	else if(list == &ListFilterLog_StCur){
+		if(list_item){
+			if(TESTBIT(thld_state_fil, list_item)){
+				CLRBIT(thld_state_fil, list_item);
+			}
+			else{
+				SETBIT(thld_state_fil, list_item);
+			}
+		}
+		else{
+			thld_state_fil = list_item;
+		}
+	}
+	else if(list == &ListFilterLog_Err){
+		if(list_item){
+			if(TESTBIT(err_state_fil, list_item)){
+				CLRBIT(err_state_fil, list_item);
+			}
+			else{
+				SETBIT(err_state_fil, list_item);
+			}
+		}
+		else{
+			err_state_fil = list_item;
+		}
+	}
+	else if(list == &ListFilterLog_Gas){
+		if(list_item){
+			if(TESTBIT(formula_fil, list_item)){
+				CLRBIT(formula_fil, list_item);
+			}
+			else{
+				SETBIT(formula_fil, list_item);
+			}
+		}
+		else{
+			formula_fil = list_item;
+		}
+	}
+//	list->moveTo(800, 0);
+//	list->invalidate();
 }

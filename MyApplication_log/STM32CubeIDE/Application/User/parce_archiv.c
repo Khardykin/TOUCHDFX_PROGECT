@@ -31,7 +31,7 @@ static uint32_t 	read_state_file_archiv(TYPE_STATE_FILE type_state_file);
 static void 		init_log_search_by_filter_time(uint32_t time_start, uint32_t time_stop, uint16_t position);
 static void 		init_file_found_logs(void);
 
-static uint8_t 		log_search_by_filter(uint8_t * data, TYPE_LOG type_log,	uint8_t channel_num_fil,
+static uint8_t 		log_search_by_filter(uint8_t * data, TYPE_LOG type_log,	uint32_t channel_num_fil,
 		uint8_t loop_state_fil, uint8_t thld_state_fil, uint16_t err_state_fil,
 		uint8_t ch_type_fil, uint8_t units_fil, uint8_t formula_fil);
 //========================================================================================
@@ -364,7 +364,7 @@ void clear_file_with_found_log(void)
 // Запись найденных по фильтру логов в файл
 // Возвращает количество найденных логов
 uint16_t recording_of_logs_found_by_the_filter_to_file(uint16_t search_count_log, TYPE_LOG type_log, uint32_t * time_start, uint32_t time_stop, uint16_t *position,
-		uint8_t channel_num_fil, uint8_t loop_state_fil,uint8_t thld_state_fil,uint16_t err_state_fil,
+		uint32_t channel_num_fil, uint8_t loop_state_fil,uint8_t thld_state_fil,uint16_t err_state_fil,
 		uint8_t ch_type_fil, uint8_t units_fil, uint8_t formula_fil)
 {
 	uint8_t 	data[100];
@@ -860,7 +860,7 @@ static void init_file_found_logs(void)
 //========================================================================================
 // Чтение найденных по фильтру логов из файла
 static uint8_t log_search_by_filter(uint8_t * data, TYPE_LOG type_log,
-		uint8_t channel_num_fil, uint8_t loop_state_fil,uint8_t thld_state_fil,uint16_t err_state_fil,
+		uint32_t channel_num_fil, uint8_t loop_state_fil,uint8_t thld_state_fil,uint16_t err_state_fil,
 		uint8_t ch_type_fil, uint8_t units_fil, uint8_t formula_fil)
 {
 #ifndef DEBUG_NOT_FATFS
@@ -883,7 +883,8 @@ static uint8_t log_search_by_filter(uint8_t * data, TYPE_LOG type_log,
 						((ch_type_fil)?((1 << Event_log_readings_ptr->ch_type) | ch_type_fil):(1)) &&
 						((units_fil)?((1 << Event_log_readings_ptr->units) | units_fil):(1)) &&
 						((formula_fil)?((1 << Event_log_readings_ptr->formula) | formula_fil):(1)) &&
-						((channel_num_fil <= 32)?(Event_log_readings_ptr->channel_num == channel_num_fil):(1))
+						((channel_num_fil)?((1 << Event_log_readings_ptr->channel_num) | channel_num_fil):(1))
+//						((channel_num_fil <= 32)?(Event_log_readings_ptr->channel_num == channel_num_fil):(1))
 						)
 				{
 					state_search_log = 1;
@@ -896,7 +897,8 @@ static uint8_t log_search_by_filter(uint8_t * data, TYPE_LOG type_log,
 						((ch_type_fil)?((1 << Event_log_param_update_ptr->ch_type) | ch_type_fil):(1)) &&
 						((units_fil)?((1 << Event_log_param_update_ptr->units) | units_fil):(1)) &&
 						((formula_fil)?((1 << Event_log_param_update_ptr->formula) | formula_fil):(1)) &&
-						((channel_num_fil <= 32)?(Event_log_param_update_ptr->channel_num == channel_num_fil):(1))
+						((channel_num_fil)?((1 << Event_log_readings_ptr->channel_num) | channel_num_fil):(1))
+//						((channel_num_fil <= 32)?(Event_log_param_update_ptr->channel_num == channel_num_fil):(1))
 						)
 				{
 					state_search_log = 1;

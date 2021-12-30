@@ -8,14 +8,13 @@
 
 Screen1ViewBase::Screen1ViewBase() :
     buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler),
-    flexButtonCallback(this, &Screen1ViewBase::flexButtonCallbackHandler),
-    updateItemCallback(this, &Screen1ViewBase::updateItemCallbackHandler)
+    flexButtonCallback(this, &Screen1ViewBase::flexButtonCallbackHandler)
 {
 
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
-    boxWithBorder1.setPosition(-2, 0, 800, 480);
+    boxWithBorder1.setPosition(3, 0, 800, 480);
     boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     boxWithBorder1.setBorderSize(3);
@@ -55,19 +54,6 @@ Screen1ViewBase::Screen1ViewBase() :
     flexButtonReadLog.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
     flexButtonReadLog.setPosition(585, 74, 196, 30);
     flexButtonReadLog.setAction(flexButtonCallback);
-
-    flexButtonFilterData.setBoxWithBorderPosition(0, 0, 150, 59);
-    flexButtonFilterData.setBorderSize(2);
-    flexButtonFilterData.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    flexButtonFilterData.setTwoWildcardText(TypedText(T___SINGLEUSE_ZX97));
-    Unicode::snprintf(flexButtonFilterDataBuffer1, FLEXBUTTONFILTERDATABUFFER1_SIZE, "%s", TypedText(T___SINGLEUSE_5ZOV).getText());
-    flexButtonFilterData.setWildcardTextBuffer1(flexButtonFilterDataBuffer1);
-    Unicode::snprintf(flexButtonFilterDataBuffer2, FLEXBUTTONFILTERDATABUFFER2_SIZE, "%s", TypedText(T___SINGLEUSE_W7NB).getText());
-    flexButtonFilterData.setWildcardTextBuffer2(flexButtonFilterDataBuffer2);
-    flexButtonFilterData.setTwoWildcardTextPosition(0, 0, 150, 59);
-    flexButtonFilterData.setTwoWildcardTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
-    flexButtonFilterData.setPosition(32, 141, 150, 59);
-    flexButtonFilterData.setAction(flexButtonCallback);
 
     listLayoutPageButton.setDirection(touchgfx::EAST);
     listLayoutPageButton.setXY(203, 413);
@@ -163,6 +149,154 @@ Screen1ViewBase::Screen1ViewBase() :
     flexButtonPageForward.setAction(flexButtonCallback);
     listLayoutPageButton.add(flexButtonPageForward);
 
+    ListFilterLog_Gas.setXY(1199, 4);
+
+    ListFilterLog_Err.setXY(1001, 384);
+    ListFilterLog_Err.setVisible(false);
+
+    ListFilterLog_StCur.setXY(1001, 195);
+    ListFilterLog_StCur.setVisible(false);
+
+    ListFilterLog_Unit.setXY(1001, 4);
+    ListFilterLog_Unit.setVisible(false);
+
+    ListFilterLog_StLoop.setXY(806, 384);
+    ListFilterLog_StLoop.setVisible(false);
+
+    ListFilterLog_TypeChan.setXY(806, 195);
+    ListFilterLog_TypeChan.setVisible(false);
+
+    ListFilterLog_Num.setXY(806, 4);
+    ListFilterLog_Num.setVisible(false);
+
+    flexButtonFilterGas.setBoxWithBorderPosition(0, 0, 100, 59);
+    flexButtonFilterGas.setBorderSize(2);
+    flexButtonFilterGas.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButtonFilterGas.setTwoWildcardText(TypedText(T___SINGLEUSE_84Z8));
+    Unicode::snprintf(flexButtonFilterGasBuffer1, FLEXBUTTONFILTERGASBUFFER1_SIZE, "%s", TypedText(T___SINGLEUSE_NNWG).getText());
+    flexButtonFilterGas.setWildcardTextBuffer1(flexButtonFilterGasBuffer1);
+    flexButtonFilterGasBuffer2[0] = 0;
+    flexButtonFilterGas.setWildcardTextBuffer2(flexButtonFilterGasBuffer2);
+    flexButtonFilterGas.setTwoWildcardTextPosition(0, 0, 100, 59);
+    flexButtonFilterGas.setTwoWildcardTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    flexButtonFilterGas.setPosition(682, 141, 100, 59);
+    flexButtonFilterGas.setAction(flexButtonCallback);
+
+    flexButtonFilterErr.setBoxWithBorderPosition(0, 0, 50, 59);
+    flexButtonFilterErr.setBorderSize(2);
+    flexButtonFilterErr.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButtonFilterErr.setTwoWildcardText(TypedText(T___SINGLEUSE_4O78));
+    Unicode::snprintf(flexButtonFilterErrBuffer1, FLEXBUTTONFILTERERRBUFFER1_SIZE, "%s", TypedText(T___SINGLEUSE_XN5A).getText());
+    flexButtonFilterErr.setWildcardTextBuffer1(flexButtonFilterErrBuffer1);
+    flexButtonFilterErrBuffer2[0] = 0;
+    flexButtonFilterErr.setWildcardTextBuffer2(flexButtonFilterErrBuffer2);
+    flexButtonFilterErr.setTwoWildcardTextPosition(0, 0, 50, 59);
+    flexButtonFilterErr.setTwoWildcardTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    flexButtonFilterErr.setPosition(632, 141, 50, 59);
+    flexButtonFilterErr.setAction(flexButtonCallback);
+
+    flexButtonFilterThreshold.setBoxWithBorderPosition(0, 0, 100, 59);
+    flexButtonFilterThreshold.setBorderSize(2);
+    flexButtonFilterThreshold.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButtonFilterThreshold.setTwoWildcardText(TypedText(T___SINGLEUSE_D5AS));
+    Unicode::snprintf(flexButtonFilterThresholdBuffer1, FLEXBUTTONFILTERTHRESHOLDBUFFER1_SIZE, "%s", TypedText(T___SINGLEUSE_VTHY).getText());
+    flexButtonFilterThreshold.setWildcardTextBuffer1(flexButtonFilterThresholdBuffer1);
+    flexButtonFilterThresholdBuffer2[0] = 0;
+    flexButtonFilterThreshold.setWildcardTextBuffer2(flexButtonFilterThresholdBuffer2);
+    flexButtonFilterThreshold.setTwoWildcardTextPosition(0, 0, 100, 59);
+    flexButtonFilterThreshold.setTwoWildcardTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    flexButtonFilterThreshold.setPosition(532, 141, 100, 59);
+    flexButtonFilterThreshold.setAction(flexButtonCallback);
+
+    flexButtonFilterUnit.setBoxWithBorderPosition(0, 0, 50, 59);
+    flexButtonFilterUnit.setBorderSize(2);
+    flexButtonFilterUnit.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButtonFilterUnit.setTwoWildcardText(TypedText(T___SINGLEUSE_7RS5));
+    Unicode::snprintf(flexButtonFilterUnitBuffer1, FLEXBUTTONFILTERUNITBUFFER1_SIZE, "%s", TypedText(T___SINGLEUSE_3018).getText());
+    flexButtonFilterUnit.setWildcardTextBuffer1(flexButtonFilterUnitBuffer1);
+    flexButtonFilterUnitBuffer2[0] = 0;
+    flexButtonFilterUnit.setWildcardTextBuffer2(flexButtonFilterUnitBuffer2);
+    flexButtonFilterUnit.setTwoWildcardTextPosition(0, 0, 50, 59);
+    flexButtonFilterUnit.setTwoWildcardTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    flexButtonFilterUnit.setPosition(482, 141, 50, 59);
+    flexButtonFilterUnit.setAction(flexButtonCallback);
+
+    flexButtonFilterConc.setBoxWithBorderPosition(0, 0, 50, 59);
+    flexButtonFilterConc.setBorderSize(2);
+    flexButtonFilterConc.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButtonFilterConc.setWildcardText(TypedText(T___SINGLEUSE_0XAZ));
+    Unicode::snprintf(flexButtonFilterConcBuffer, FLEXBUTTONFILTERCONC_SIZE, "%s", TypedText(T___SINGLEUSE_FH4T).getText());
+    flexButtonFilterConc.setWildcardTextBuffer(flexButtonFilterConcBuffer);
+    flexButtonFilterConc.setWildcardTextPosition(0, 0, 50, 59);
+    flexButtonFilterConc.setWildcardTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    flexButtonFilterConc.setPosition(432, 141, 50, 59);
+
+    flexButtonFilterStLoop.setBoxWithBorderPosition(0, 0, 100, 59);
+    flexButtonFilterStLoop.setBorderSize(2);
+    flexButtonFilterStLoop.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButtonFilterStLoop.setTwoWildcardText(TypedText(T___SINGLEUSE_3ADS));
+    Unicode::snprintf(flexButtonFilterStLoopBuffer1, FLEXBUTTONFILTERSTLOOPBUFFER1_SIZE, "%s", TypedText(T___SINGLEUSE_FR0S).getText());
+    flexButtonFilterStLoop.setWildcardTextBuffer1(flexButtonFilterStLoopBuffer1);
+    flexButtonFilterStLoopBuffer2[0] = 0;
+    flexButtonFilterStLoop.setWildcardTextBuffer2(flexButtonFilterStLoopBuffer2);
+    flexButtonFilterStLoop.setTwoWildcardTextPosition(0, 0, 100, 59);
+    flexButtonFilterStLoop.setTwoWildcardTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    flexButtonFilterStLoop.setPosition(332, 141, 100, 59);
+    flexButtonFilterStLoop.setAction(flexButtonCallback);
+
+    flexButtonFilterTypeChannel.setBoxWithBorderPosition(0, 0, 100, 59);
+    flexButtonFilterTypeChannel.setBorderSize(2);
+    flexButtonFilterTypeChannel.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButtonFilterTypeChannel.setTwoWildcardText(TypedText(T___SINGLEUSE_0627));
+    Unicode::snprintf(flexButtonFilterTypeChannelBuffer1, FLEXBUTTONFILTERTYPECHANNELBUFFER1_SIZE, "%s", TypedText(T___SINGLEUSE_QCEL).getText());
+    flexButtonFilterTypeChannel.setWildcardTextBuffer1(flexButtonFilterTypeChannelBuffer1);
+    flexButtonFilterTypeChannelBuffer2[0] = 0;
+    flexButtonFilterTypeChannel.setWildcardTextBuffer2(flexButtonFilterTypeChannelBuffer2);
+    flexButtonFilterTypeChannel.setTwoWildcardTextPosition(0, 0, 100, 59);
+    flexButtonFilterTypeChannel.setTwoWildcardTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    flexButtonFilterTypeChannel.setPosition(232, 141, 100, 59);
+    flexButtonFilterTypeChannel.setAction(flexButtonCallback);
+
+    flexButtonFilterNum.setBoxWithBorderPosition(0, 0, 50, 59);
+    flexButtonFilterNum.setBorderSize(2);
+    flexButtonFilterNum.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButtonFilterNum.setTwoWildcardText(TypedText(T___SINGLEUSE_PRB2));
+    Unicode::snprintf(flexButtonFilterNumBuffer1, FLEXBUTTONFILTERNUMBUFFER1_SIZE, "%s", TypedText(T___SINGLEUSE_459A).getText());
+    flexButtonFilterNum.setWildcardTextBuffer1(flexButtonFilterNumBuffer1);
+    flexButtonFilterNumBuffer2[0] = 0;
+    flexButtonFilterNum.setWildcardTextBuffer2(flexButtonFilterNumBuffer2);
+    flexButtonFilterNum.setTwoWildcardTextPosition(0, 0, 50, 59);
+    flexButtonFilterNum.setTwoWildcardTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    flexButtonFilterNum.setPosition(182, 141, 50, 59);
+    flexButtonFilterNum.setAction(flexButtonCallback);
+
+    flexButtonFilterData.setBoxWithBorderPosition(0, 0, 150, 59);
+    flexButtonFilterData.setBorderSize(2);
+    flexButtonFilterData.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButtonFilterData.setWildcardText(TypedText(T___SINGLEUSE_ZX97));
+    Unicode::snprintf(flexButtonFilterDataBuffer, FLEXBUTTONFILTERDATA_SIZE, "%s", TypedText(T___SINGLEUSE_5ZOV).getText());
+    flexButtonFilterData.setWildcardTextBuffer(flexButtonFilterDataBuffer);
+    flexButtonFilterData.setWildcardTextPosition(0, 0, 150, 59);
+    flexButtonFilterData.setWildcardTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    flexButtonFilterData.setPosition(32, 141, 150, 59);
+    flexButtonFilterData.setAction(flexButtonCallback);
+
+    textAreaStartDate.setXY(60, 160);
+    textAreaStartDate.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textAreaStartDate.setLinespacing(0);
+    Unicode::snprintf(textAreaStartDateBuffer, TEXTAREASTARTDATE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_3H21).getText());
+    textAreaStartDate.setWildcard(textAreaStartDateBuffer);
+    textAreaStartDate.resizeToCurrentText();
+    textAreaStartDate.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9LC6));
+
+    textAreaStopDate.setXY(60, 179);
+    textAreaStopDate.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textAreaStopDate.setLinespacing(0);
+    Unicode::snprintf(textAreaStopDateBuffer, TEXTAREASTOPDATE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_FS6U).getText());
+    textAreaStopDate.setWildcard(textAreaStopDateBuffer);
+    textAreaStopDate.resizeToCurrentText();
+    textAreaStopDate.setTypedText(touchgfx::TypedText(T___SINGLEUSE_V4DC));
+
     modalWindow1.setBackground(touchgfx::BitmapId(BITMAP_DARK_BACKGROUNDS_MAIN_BG_480X272PX_ID), 160, 104);
     modalWindow1.setShadeColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     modalWindow1.setShadeAlpha(150);
@@ -206,31 +340,31 @@ Screen1ViewBase::Screen1ViewBase() :
     textAreaDataStop.setTypedText(touchgfx::TypedText(T___SINGLEUSE_01JS));
     modalWindow1.add(textAreaDataStop);
 
-    toggleButton1.setXY(407, 25);
-    toggleButton1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
-
-    scrollList1.setPosition(335, 14, 50, 186);
-    scrollList1.setHorizontal(false);
-    scrollList1.setCircular(false);
-    scrollList1.setEasingEquation(touchgfx::EasingEquations::backEaseOut);
-    scrollList1.setSwipeAcceleration(10);
-    scrollList1.setDragAcceleration(10);
-    scrollList1.setNumberOfItems(5);
-    scrollList1.setPadding(0, 0);
-    scrollList1.setSnapping(false);
-    scrollList1.setDrawableSize(20, 0);
-    scrollList1.setDrawables(scrollList1ListItems, updateItemCallback);
-
     add(__background);
     add(boxWithBorder1);
     add(listLayoutLogTable);
     add(button1);
     add(flexButtonReadLog);
-    add(flexButtonFilterData);
     add(listLayoutPageButton);
+    add(ListFilterLog_Gas);
+    add(ListFilterLog_Err);
+    add(ListFilterLog_StCur);
+    add(ListFilterLog_Unit);
+    add(ListFilterLog_StLoop);
+    add(ListFilterLog_TypeChan);
+    add(ListFilterLog_Num);
+    add(flexButtonFilterGas);
+    add(flexButtonFilterErr);
+    add(flexButtonFilterThreshold);
+    add(flexButtonFilterUnit);
+    add(flexButtonFilterConc);
+    add(flexButtonFilterStLoop);
+    add(flexButtonFilterTypeChannel);
+    add(flexButtonFilterNum);
+    add(flexButtonFilterData);
+    add(textAreaStartDate);
+    add(textAreaStopDate);
     add(modalWindow1);
-    add(toggleButton1);
-    add(scrollList1);
 }
 
 void Screen1ViewBase::setupScreen()
@@ -245,11 +379,13 @@ void Screen1ViewBase::setupScreen()
     customContainerTableLog_7.initialize();
     customContainerTableLog_8.initialize();
     customContainerTableLog_9.initialize();
-    scrollList1.initialize();
-    for (int i = 0; i < scrollList1ListItems.getNumberOfDrawables(); i++)
-    {
-        scrollList1ListItems[i].initialize();
-    }
+    ListFilterLog_Gas.initialize();
+    ListFilterLog_Err.initialize();
+    ListFilterLog_StCur.initialize();
+    ListFilterLog_Unit.initialize();
+    ListFilterLog_StLoop.initialize();
+    ListFilterLog_TypeChan.initialize();
+    ListFilterLog_Num.initialize();
 }
 
 void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
@@ -271,13 +407,6 @@ void Screen1ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCo
         //When flexButtonReadLog clicked call virtual function
         //Call functionReadLog
         functionReadLog();
-    }
-    else if (&src == &flexButtonFilterData)
-    {
-        //InteractionFilterData
-        //When flexButtonFilterData clicked call virtual function
-        //Call functionFilterData
-        functionFilterData();
     }
     else if (&src == &flexButtonPageBack)
     {
@@ -328,6 +457,62 @@ void Screen1ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCo
         //Call functionPageForward
         functionPageForward();
     }
+    else if (&src == &flexButtonFilterGas)
+    {
+        //InteractionFilterGas
+        //When flexButtonFilterGas clicked call virtual function
+        //Call functionFilterGas
+        functionFilterGas();
+    }
+    else if (&src == &flexButtonFilterErr)
+    {
+        //InteractionFilterErr
+        //When flexButtonFilterErr clicked call virtual function
+        //Call functionFilterErr
+        functionFilterErr();
+    }
+    else if (&src == &flexButtonFilterThreshold)
+    {
+        //InteractionFilterThreshold
+        //When flexButtonFilterThreshold clicked call virtual function
+        //Call functionFilterThreshold
+        functionFilterThreshold();
+    }
+    else if (&src == &flexButtonFilterUnit)
+    {
+        //InteractionFilterUnit
+        //When flexButtonFilterUnit clicked call virtual function
+        //Call functionFilterUnit
+        functionFilterUnit();
+    }
+    else if (&src == &flexButtonFilterStLoop)
+    {
+        //InteractionFilterStLoop
+        //When flexButtonFilterStLoop clicked call virtual function
+        //Call functionFilterStLoop
+        functionFilterStLoop();
+    }
+    else if (&src == &flexButtonFilterTypeChannel)
+    {
+        //InteractionFilterTypeChannel
+        //When flexButtonFilterTypeChannel clicked call virtual function
+        //Call functionFilterTypeChannel
+        functionFilterTypeChannel();
+    }
+    else if (&src == &flexButtonFilterNum)
+    {
+        //InteractionFilterNum
+        //When flexButtonFilterNum clicked call virtual function
+        //Call functionFilterNum
+        functionFilterNum();
+    }
+    else if (&src == &flexButtonFilterData)
+    {
+        //InteractionFilterDate
+        //When flexButtonFilterData clicked call virtual function
+        //Call functionFilterDate
+        functionFilterDate();
+    }
     else if (&src == &flexButtonOkFilDataTime)
     {
         //InteractionOkFilDataTime
@@ -342,15 +527,5 @@ void Screen1ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCo
         //Hide modalWindow1
         modalWindow1.setVisible(false);
         modalWindow1.invalidate();
-    }
-}
-
-void Screen1ViewBase::updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex)
-{
-    if (items == &scrollList1ListItems)
-    {
-        touchgfx::Drawable* d = items->getDrawable(containerIndex);
-        CustomContainerScrollList* cc = (CustomContainerScrollList*)d;
-        scrollList1UpdateItem(*cc, itemIndex);
     }
 }

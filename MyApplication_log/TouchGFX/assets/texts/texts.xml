@@ -200,10 +200,10 @@
       <Translation Language="GB">&gt;</Translation>
     </Text>
     <Text Id="__SingleUse_ZX97" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">Filter data&#10;&lt;value&gt;&#10;&lt;value&gt;</Translation>
+      <Translation Language="GB">&lt;value&gt;</Translation>
     </Text>
     <Text Id="__SingleUse_5ZOV" TypographyId="Default" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">01-01-1900</Translation>
+      <Translation Language="GB">Date start/stop</Translation>
     </Text>
     <Text Id="__SingleUse_NY18" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">Ok</Translation>
@@ -220,9 +220,6 @@
     <Text Id="asdfg" TypographyId="Default" Alignment="Left" Direction="LTR">
       <Translation Language="GB">&lt;&gt;</Translation>
     </Text>
-    <Text Id="__SingleUse_W7NB" TypographyId="Default" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">01-01-1900</Translation>
-    </Text>
     <Text Id="__SingleUse_A8GK" TypographyId="Default" Alignment="Left" Direction="LTR">
       <Translation Language="GB">&lt;value&gt;</Translation>
     </Text>
@@ -235,11 +232,71 @@
     <Text Id="__SingleUse_EEOS" TypographyId="Default" Alignment="Left" Direction="LTR">
       <Translation Language="GB">Data stop</Translation>
     </Text>
-    <Text Id="__SingleUse_Z0OO" TypographyId="Default" Alignment="Center" Direction="LTR">
+    <Text Id="__SingleUse_PRB2" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;&#10;&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_459A" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Num</Translation>
+    </Text>
+    <Text Id="__SingleUse_7SO4" TypographyId="Default" Alignment="Left" Direction="LTR">
       <Translation Language="GB">&lt;value&gt;</Translation>
     </Text>
-    <Text Id="__SingleUse_CAOO" TypographyId="Default" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">1</Translation>
+    <Text Id="__SingleUse_510H" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">000</Translation>
+    </Text>
+    <Text Id="__SingleUse_0627" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;&#10;&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_QCEL" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Type channel</Translation>
+    </Text>
+    <Text Id="__SingleUse_9LC6" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_3H21" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">01-01-1900</Translation>
+    </Text>
+    <Text Id="__SingleUse_V4DC" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_FS6U" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">01-01-1900</Translation>
+    </Text>
+    <Text Id="__SingleUse_3ADS" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;&#10;&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_FR0S" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">St loop</Translation>
+    </Text>
+    <Text Id="__SingleUse_0XAZ" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_FH4T" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Conc</Translation>
+    </Text>
+    <Text Id="__SingleUse_7RS5" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;&#10;&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_3018" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Unit</Translation>
+    </Text>
+    <Text Id="__SingleUse_D5AS" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;&#10;&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_VTHY" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Threshold</Translation>
+    </Text>
+    <Text Id="__SingleUse_4O78" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;&#10;&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_XN5A" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Err</Translation>
+    </Text>
+    <Text Id="__SingleUse_84Z8" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;&#10;&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_NNWG" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Gas</Translation>
     </Text>
   </Texts>
   <Typographies>

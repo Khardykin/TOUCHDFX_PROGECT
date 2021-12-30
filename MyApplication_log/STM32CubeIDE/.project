@@ -50,6 +50,11 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Core/Src/main.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/mb_regs_decoder.c</name>
+			<type>1</type>
+			<location>C:/TouchGFXProjects/TOUCHDFX_PROGECT/MyApplication_log/Core/Src/mb_regs_decoder.c</location>
+		</link>
+		<link>
 			<name>Application/User/stm32f4xx_hal_msp.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Core/Src/stm32f4xx_hal_msp.c</locationURI>
@@ -330,14 +335,24 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/ChannelInfo.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/ChannelInfo.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/FrontendApplication.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/CustomContainer1.cpp</name>
+			<name>Application/User/gui/UserUtils.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/CustomContainer1.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/UserUtils.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/ConfigListFilterLog.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/ConfigListFilterLog.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/gui/CustomContainerButton_key.cpp</name>
@@ -355,14 +370,14 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/CustomContainerKeyboard_Num.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/CustomContainerScrollList.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/CustomContainerScrollList.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/gui/CustomContainerTableLog.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/CustomContainerTableLog.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/ListTile.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/ListTile.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/gui/Model.cpp</name>
@@ -480,9 +495,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/CustomContainer1Base.cpp</name>
+			<name>Application/User/generated/ConfigListFilterLogBase.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/CustomContainer1Base.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/ConfigListFilterLogBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/CustomContainerButton_keyBase.cpp</name>
@@ -500,14 +515,14 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/CustomContainerKeyboard_NumBase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/CustomContainerScrollListBase.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/CustomContainerScrollListBase.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/CustomContainerTableLogBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/CustomContainerTableLogBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/ListTileBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/ListTileBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Screen1ViewBase.cpp</name>
@@ -533,16 +548,6 @@
 			<name>Application/User/generated/image_Blue_Buttons_Round_Edge_small_pressed.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_Blue_Togglebars_Toggle_round_large_button_OFF.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_large_button_OFF.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_Blue_Togglebars_Toggle_round_large_button_ON.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_large_button_ON.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_Dark_Backgrounds_Main_bg_320x240px.cpp</name>

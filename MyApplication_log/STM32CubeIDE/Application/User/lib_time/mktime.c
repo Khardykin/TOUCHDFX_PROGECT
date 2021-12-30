@@ -55,7 +55,7 @@ mktime(struct tm * timeptr)
 
 	ret -= __utc_offset;
 
-	localtime_r(&ret, timeptr);
+	//localtime_r(&ret, timeptr);
 
 	return ret;
 }

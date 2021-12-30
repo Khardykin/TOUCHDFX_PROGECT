@@ -68,7 +68,7 @@ extern void 		read_start_stop_state_archiv(uint32_t *time_start, uint32_t *time_
 //
 extern void 		clear_file_with_found_log(void);
 extern uint16_t 	recording_of_logs_found_by_the_filter_to_file(uint16_t search_count_log, TYPE_LOG type_log, uint32_t * time_start, uint32_t time_stop, uint16_t *position,
-		uint8_t channel_num_fil, uint8_t loop_state_fil,uint8_t thld_state_fil,uint16_t err_state_fil,
+		uint32_t channel_num_fil, uint8_t loop_state_fil,uint8_t thld_state_fil,uint16_t err_state_fil,
 		uint8_t ch_type_fil, uint8_t units_fil, uint8_t formula_fil);
 
 //========================================================================================

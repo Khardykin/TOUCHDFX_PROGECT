@@ -13,12 +13,10 @@
 #include <gui/containers/CustomContainerTableLog.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <gui/containers/ConfigListFilterLog.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/ModalWindow.hpp>
 #include <touchgfx/Color.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/ToggleButton.hpp>
-#include <touchgfx/containers/scrollers/ScrollList.hpp>
-#include <gui/containers/CustomContainerScrollList.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -27,15 +25,10 @@ public:
     virtual ~Screen1ViewBase() {}
     virtual void setupScreen();
 
-    virtual void scrollList1UpdateItem(CustomContainerScrollList& item, int16_t itemIndex)
-    {
-        // Override and implement this function in Screen1
-    }
-
     /*
      * Virtual Action Handlers
      */
-    virtual void functionFilterData()
+    virtual void functionFilterDate()
     {
         // Override and implement this function in Screen1
     }
@@ -85,6 +78,41 @@ public:
         // Override and implement this function in Screen1
     }
 
+    virtual void functionFilterNum()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionFilterTypeChannel()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionFilterStLoop()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionFilterUnit()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionFilterThreshold()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionFilterErr()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionFilterGas()
+    {
+        // Override and implement this function in Screen1
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -108,7 +136,6 @@ protected:
     CustomContainerTableLog customContainerTableLog_9;
     touchgfx::Button button1;
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonReadLog;
-    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterData;
     touchgfx::ListLayout listLayoutPageButton;
     touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonPageBack;
     touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonPage_1;
@@ -117,26 +144,41 @@ protected:
     touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonPage_4;
     touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonPage_5;
     touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonPageForward;
+    ConfigListFilterLog ListFilterLog_Gas;
+    ConfigListFilterLog ListFilterLog_Err;
+    ConfigListFilterLog ListFilterLog_StCur;
+    ConfigListFilterLog ListFilterLog_Unit;
+    ConfigListFilterLog ListFilterLog_StLoop;
+    ConfigListFilterLog ListFilterLog_TypeChan;
+    ConfigListFilterLog ListFilterLog_Num;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterGas;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterErr;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterThreshold;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterUnit;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterConc;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterStLoop;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterTypeChannel;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterNum;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterData;
+    touchgfx::TextAreaWithOneWildcard textAreaStartDate;
+    touchgfx::TextAreaWithOneWildcard textAreaStopDate;
     touchgfx::ModalWindow modalWindow1;
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonOkFilDataTime;
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonExitFilDataTime;
     touchgfx::TextAreaWithOneWildcard textAreaDataStart;
     touchgfx::TextAreaWithOneWildcard textAreaDataStop;
-    touchgfx::ToggleButton toggleButton1;
-    touchgfx::ScrollList scrollList1;
-    touchgfx::DrawableListItems<CustomContainerScrollList, 11> scrollList1ListItems;
 
     /*
      * Wildcard Buffers
      */
+    static const uint16_t TEXTAREASTARTDATE_SIZE = 12;
+    touchgfx::Unicode::UnicodeChar textAreaStartDateBuffer[TEXTAREASTARTDATE_SIZE];
+    static const uint16_t TEXTAREASTOPDATE_SIZE = 12;
+    touchgfx::Unicode::UnicodeChar textAreaStopDateBuffer[TEXTAREASTOPDATE_SIZE];
     static const uint16_t TEXTAREADATASTART_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textAreaDataStartBuffer[TEXTAREADATASTART_SIZE];
     static const uint16_t TEXTAREADATASTOP_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textAreaDataStopBuffer[TEXTAREADATASTOP_SIZE];
-    static const uint16_t FLEXBUTTONFILTERDATABUFFER1_SIZE = 11;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterDataBuffer1[FLEXBUTTONFILTERDATABUFFER1_SIZE];
-    static const uint16_t FLEXBUTTONFILTERDATABUFFER2_SIZE = 11;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterDataBuffer2[FLEXBUTTONFILTERDATABUFFER2_SIZE];
     static const uint16_t FLEXBUTTONPAGEBACK_SIZE = 10;
     touchgfx::Unicode::UnicodeChar flexButtonPageBackBuffer[FLEXBUTTONPAGEBACK_SIZE];
     static const uint16_t FLEXBUTTONPAGE_1_SIZE = 10;
@@ -151,6 +193,38 @@ protected:
     touchgfx::Unicode::UnicodeChar flexButtonPage_5Buffer[FLEXBUTTONPAGE_5_SIZE];
     static const uint16_t FLEXBUTTONPAGEFORWARD_SIZE = 10;
     touchgfx::Unicode::UnicodeChar flexButtonPageForwardBuffer[FLEXBUTTONPAGEFORWARD_SIZE];
+    static const uint16_t FLEXBUTTONFILTERGASBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterGasBuffer1[FLEXBUTTONFILTERGASBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERGASBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterGasBuffer2[FLEXBUTTONFILTERGASBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERERRBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterErrBuffer1[FLEXBUTTONFILTERERRBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERERRBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterErrBuffer2[FLEXBUTTONFILTERERRBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTHRESHOLDBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterThresholdBuffer1[FLEXBUTTONFILTERTHRESHOLDBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTHRESHOLDBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterThresholdBuffer2[FLEXBUTTONFILTERTHRESHOLDBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERUNITBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterUnitBuffer1[FLEXBUTTONFILTERUNITBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERUNITBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterUnitBuffer2[FLEXBUTTONFILTERUNITBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERCONC_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterConcBuffer[FLEXBUTTONFILTERCONC_SIZE];
+    static const uint16_t FLEXBUTTONFILTERSTLOOPBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterStLoopBuffer1[FLEXBUTTONFILTERSTLOOPBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERSTLOOPBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterStLoopBuffer2[FLEXBUTTONFILTERSTLOOPBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTYPECHANNELBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterTypeChannelBuffer1[FLEXBUTTONFILTERTYPECHANNELBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTYPECHANNELBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterTypeChannelBuffer2[FLEXBUTTONFILTERTYPECHANNELBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERNUMBUFFER1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterNumBuffer1[FLEXBUTTONFILTERNUMBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERNUMBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterNumBuffer2[FLEXBUTTONFILTERNUMBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERDATA_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterDataBuffer[FLEXBUTTONFILTERDATA_SIZE];
 
 private:
 
@@ -159,14 +233,12 @@ private:
      */
     touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButton&> buttonCallback;
     touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
-    touchgfx::Callback<Screen1ViewBase, touchgfx::DrawableListItemsInterface*, int16_t, int16_t> updateItemCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
     void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
-    void updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex);
 
 };
 
