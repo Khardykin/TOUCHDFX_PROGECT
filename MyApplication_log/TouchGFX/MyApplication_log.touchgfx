@@ -19,6 +19,96 @@
           },
           {
             "Type": "ListLayout",
+            "Name": "listLayoutLogTable_Type2",
+            "X": 32,
+            "Y": 540,
+            "Width": 750,
+            "Height": 200,
+            "Direction": "South",
+            "Components": [
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customContainerTableLog_Type2_0",
+                "Width": 750,
+                "Height": 20,
+                "CustomContainerDefinitionName": "CustomContainerTableLog_Type2"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customContainerTableLog_Type2_1",
+                "Y": 20,
+                "Width": 750,
+                "Height": 20,
+                "CustomContainerDefinitionName": "CustomContainerTableLog_Type2"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customContainerTableLog_Type2_2",
+                "Y": 40,
+                "Width": 750,
+                "Height": 20,
+                "CustomContainerDefinitionName": "CustomContainerTableLog_Type2"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customContainerTableLog_Type2_3",
+                "Y": 60,
+                "Width": 750,
+                "Height": 20,
+                "CustomContainerDefinitionName": "CustomContainerTableLog_Type2"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customContainerTableLog_Type2_4",
+                "Y": 80,
+                "Width": 750,
+                "Height": 20,
+                "CustomContainerDefinitionName": "CustomContainerTableLog_Type2"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customContainerTableLog_Type2_5",
+                "Y": 100,
+                "Width": 750,
+                "Height": 20,
+                "CustomContainerDefinitionName": "CustomContainerTableLog_Type2"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customContainerTableLog_Type2_6",
+                "Y": 120,
+                "Width": 750,
+                "Height": 20,
+                "CustomContainerDefinitionName": "CustomContainerTableLog_Type2"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customContainerTableLog_Type2_7",
+                "Y": 140,
+                "Width": 750,
+                "Height": 20,
+                "CustomContainerDefinitionName": "CustomContainerTableLog_Type2"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customContainerTableLog_Type2_8",
+                "Y": 160,
+                "Width": 750,
+                "Height": 20,
+                "CustomContainerDefinitionName": "CustomContainerTableLog_Type2"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customContainerTableLog_Type2_9",
+                "Y": 180,
+                "Width": 750,
+                "Height": 20,
+                "CustomContainerDefinitionName": "CustomContainerTableLog_Type2"
+              }
+            ]
+          },
+          {
+            "Type": "ListLayout",
             "Name": "listLayoutLogTable",
             "X": 32,
             "Y": 200,
@@ -581,6 +671,1150 @@
             ]
           },
           {
+            "Type": "ListLayout",
+            "Name": "listLayoutButtonFilter_Type2",
+            "X": 32,
+            "Y": 480,
+            "Width": 750,
+            "Height": 59,
+            "Direction": "East",
+            "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterData_Type2",
+                "Width": 150,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_RL3K",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_XU9J",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 150,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterNum_Type2",
+                "X": 150,
+                "Width": 50,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_JSZ5",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_3JSL",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterThreshold_1_Type2",
+                "X": 200,
+                "Width": 50,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_55BH",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_3NDI",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterThreshold_2_Type2",
+                "X": 250,
+                "Width": 50,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_CG2S",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_13WD",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterThreshold_3_Type2",
+                "X": 300,
+                "Width": 50,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_BL0A",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_3W8Y",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterFullScale_Type2",
+                "X": 350,
+                "Width": 50,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_0QZJ",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_VERH",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterHysteresis_Type2",
+                "X": 400,
+                "Width": 50,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_UMP8",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_VN34",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterUnit_Type2",
+                "X": 450,
+                "Width": 70,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_OKWK",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_VWWH",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 70,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterGas_Type2",
+                "X": 520,
+                "Width": 100,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_BSKR",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_4T0R",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 100,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterTag_Type2",
+                "X": 620,
+                "Width": 130,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_WRID",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_LFN3",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 130,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "ListLayout",
+            "Name": "listLayoutButtonFilter",
+            "X": 32,
+            "Y": 141,
+            "Width": 750,
+            "Height": 59,
+            "Direction": "East",
+            "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterData",
+                "Width": 150,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_ZX97",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_5ZOV",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 150,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterNum",
+                "X": 150,
+                "Width": 50,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_PRB2",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_459A",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterTypeChannel",
+                "X": 200,
+                "Width": 100,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_0627",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_QCEL",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 100,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterStLoop",
+                "X": 300,
+                "Width": 100,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_3ADS",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_FR0S",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 100,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterConc",
+                "X": 400,
+                "Width": 50,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_0XAZ",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_FH4T",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterUnit",
+                "X": 450,
+                "Width": 70,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_7RS5",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_3018",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 70,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterThreshold",
+                "X": 520,
+                "Width": 80,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_D5AS",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_VTHY",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 80,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterErr",
+                "X": 600,
+                "Width": 50,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_4O78",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_XN5A",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButtonFilterGas",
+                "X": 650,
+                "Width": 100,
+                "Height": 59,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "TextId": "__SingleUse_84Z8",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_NNWG",
+                      "UseBuffer": true,
+                      "BufferSize": 15
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "ColorReleased": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    },
+                    "ColorPressed": {
+                      "Red": 10,
+                      "Green": 10,
+                      "Blue": 10
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 100,
+                    "Height": 59,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 2,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "Type": "CustomContainerInstance",
             "Name": "ListFilterLog_Gas",
             "X": 1199,
@@ -596,7 +1830,6 @@
             "Y": 384,
             "Width": 186,
             "Height": 189,
-            "Visible": false,
             "CustomContainerDefinitionName": "ConfigListFilterLog"
           },
           {
@@ -606,7 +1839,6 @@
             "Y": 195,
             "Width": 186,
             "Height": 189,
-            "Visible": false,
             "CustomContainerDefinitionName": "ConfigListFilterLog"
           },
           {
@@ -616,7 +1848,6 @@
             "Y": 4,
             "Width": 186,
             "Height": 189,
-            "Visible": false,
             "CustomContainerDefinitionName": "ConfigListFilterLog"
           },
           {
@@ -626,7 +1857,6 @@
             "Y": 384,
             "Width": 186,
             "Height": 189,
-            "Visible": false,
             "CustomContainerDefinitionName": "ConfigListFilterLog"
           },
           {
@@ -636,7 +1866,6 @@
             "Y": 195,
             "Width": 186,
             "Height": 189,
-            "Visible": false,
             "CustomContainerDefinitionName": "ConfigListFilterLog"
           },
           {
@@ -646,549 +1875,7 @@
             "Y": 4,
             "Width": 186,
             "Height": 189,
-            "Visible": false,
             "CustomContainerDefinitionName": "ConfigListFilterLog"
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonFilterGas",
-            "X": 682,
-            "Y": 141,
-            "Width": 100,
-            "Height": 59,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "TextButtonStyle",
-                "TextId": "__SingleUse_84Z8",
-                "TextRotation": "0",
-                "Wildcard1": {
-                  "TextId": "__SingleUse_NNWG",
-                  "UseBuffer": true,
-                  "BufferSize": 15
-                },
-                "Wildcard2": {
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                },
-                "ColorReleased": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "ColorPressed": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                }
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 100,
-                "Height": 59,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonFilterErr",
-            "X": 632,
-            "Y": 141,
-            "Width": 50,
-            "Height": 59,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "TextButtonStyle",
-                "TextId": "__SingleUse_4O78",
-                "TextRotation": "0",
-                "Wildcard1": {
-                  "TextId": "__SingleUse_XN5A",
-                  "UseBuffer": true,
-                  "BufferSize": 15
-                },
-                "Wildcard2": {
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                },
-                "ColorReleased": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "ColorPressed": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                }
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 50,
-                "Height": 59,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonFilterThreshold",
-            "X": 532,
-            "Y": 141,
-            "Width": 100,
-            "Height": 59,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "TextButtonStyle",
-                "TextId": "__SingleUse_D5AS",
-                "TextRotation": "0",
-                "Wildcard1": {
-                  "TextId": "__SingleUse_VTHY",
-                  "UseBuffer": true,
-                  "BufferSize": 15
-                },
-                "Wildcard2": {
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                },
-                "ColorReleased": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "ColorPressed": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                }
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 100,
-                "Height": 59,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonFilterUnit",
-            "X": 482,
-            "Y": 141,
-            "Width": 50,
-            "Height": 59,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "TextButtonStyle",
-                "TextId": "__SingleUse_7RS5",
-                "TextRotation": "0",
-                "Wildcard1": {
-                  "TextId": "__SingleUse_3018",
-                  "UseBuffer": true,
-                  "BufferSize": 15
-                },
-                "Wildcard2": {
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                },
-                "ColorReleased": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "ColorPressed": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                }
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 50,
-                "Height": 59,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonFilterConc",
-            "X": 432,
-            "Y": 141,
-            "Width": 50,
-            "Height": 59,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "TextButtonStyle",
-                "TextId": "__SingleUse_0XAZ",
-                "TextRotation": "0",
-                "Wildcard1": {
-                  "TextId": "__SingleUse_FH4T",
-                  "UseBuffer": true,
-                  "BufferSize": 15
-                },
-                "ColorReleased": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "ColorPressed": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                }
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 50,
-                "Height": 59,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonFilterStLoop",
-            "X": 332,
-            "Y": 141,
-            "Width": 100,
-            "Height": 59,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "TextButtonStyle",
-                "TextId": "__SingleUse_3ADS",
-                "TextRotation": "0",
-                "Wildcard1": {
-                  "TextId": "__SingleUse_FR0S",
-                  "UseBuffer": true,
-                  "BufferSize": 15
-                },
-                "Wildcard2": {
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                },
-                "ColorReleased": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "ColorPressed": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                }
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 100,
-                "Height": 59,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonFilterTypeChannel",
-            "X": 232,
-            "Y": 141,
-            "Width": 100,
-            "Height": 59,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "TextButtonStyle",
-                "TextId": "__SingleUse_0627",
-                "TextRotation": "0",
-                "Wildcard1": {
-                  "TextId": "__SingleUse_QCEL",
-                  "UseBuffer": true,
-                  "BufferSize": 15
-                },
-                "Wildcard2": {
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                },
-                "ColorReleased": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "ColorPressed": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                }
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 100,
-                "Height": 59,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonFilterNum",
-            "X": 182,
-            "Y": 141,
-            "Width": 50,
-            "Height": 59,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "TextButtonStyle",
-                "TextId": "__SingleUse_PRB2",
-                "TextRotation": "0",
-                "Wildcard1": {
-                  "TextId": "__SingleUse_459A",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                },
-                "Wildcard2": {
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                },
-                "ColorReleased": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "ColorPressed": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                }
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 50,
-                "Height": 59,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonFilterData",
-            "X": 32,
-            "Y": 141,
-            "Width": 150,
-            "Height": 59,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "TextButtonStyle",
-                "TextId": "__SingleUse_ZX97",
-                "TextRotation": "0",
-                "Wildcard1": {
-                  "TextId": "__SingleUse_5ZOV",
-                  "UseBuffer": true,
-                  "BufferSize": 15
-                },
-                "ColorReleased": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "ColorPressed": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                }
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 150,
-                "Height": 59,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
           },
           {
             "Type": "TextArea",
@@ -1369,6 +2056,111 @@
                   "TextId": "__SingleUse_EEOS",
                   "UseBuffer": true,
                   "BufferSize": 10
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "flexButtonTurnLog1",
+            "X": 203,
+            "Y": 44,
+            "Width": 100,
+            "Height": 50,
+            "Visible": false,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "TextId": "__SingleUse_ZILU",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "ColorPressed": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                }
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 100,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "flexButtonTurnLog2",
+            "X": 303,
+            "Y": 44,
+            "Width": 100,
+            "Height": 50,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "TextId": "__SingleUse_1JZ3",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "ColorPressed": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                }
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 100,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
                 }
               }
             ]
@@ -1583,6 +2375,72 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "functionFilterGas"
+            }
+          },
+          {
+            "InteractionName": "InteractionFilterDate_Type2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButtonFilterData_Type2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "functionFilterDate_Type2"
+            }
+          },
+          {
+            "InteractionName": "InteractionFilterNum_Type2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButtonFilterNum_Type2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "functionFilterNum_Type2"
+            }
+          },
+          {
+            "InteractionName": "InteractionFilterUnit_Type2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButtonFilterUnit_Type2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "functionFilterUnit_Type2"
+            }
+          },
+          {
+            "InteractionName": "InteractionFilterGas_Type2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButtonFilterGas_Type2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "functionFilterGas_Type2"
+            }
+          },
+          {
+            "InteractionName": "InteractionTurnLog1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButtonTurnLog1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "functionTurnLog1"
+            }
+          },
+          {
+            "InteractionName": "InteractionTurnLog2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButtonTurnLog2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "functionTurnLog2"
             }
           }
         ]
@@ -3970,6 +4828,110 @@
         ]
       },
       {
+        "Name": "ConfigListFilterLog",
+        "Width": 186,
+        "Height": 189,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxBg",
+            "Width": 186,
+            "Height": 480,
+            "Color": {
+              "Red": 71,
+              "Green": 71,
+              "Blue": 71
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "ScrollList",
+            "Name": "scrollList",
+            "Width": 186,
+            "Height": 480,
+            "IsCircular": true,
+            "ItemTemplateName": "ListTile",
+            "NumberofItems": 32,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0
+          }
+        ],
+        "Interactions": [],
+        "CustomTriggers": [
+          {
+            "Name": "trigger1"
+          }
+        ]
+      },
+      {
+        "Name": "ListTile",
+        "Width": 186,
+        "Height": 32,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "boxBg_1",
+            "X": 1,
+            "Y": 1,
+            "Width": 184,
+            "Height": 30,
+            "Visible": false,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "boxBg",
+            "X": 1,
+            "Y": 1,
+            "Width": 184,
+            "Height": 30,
+            "Visible": false,
+            "Color": {
+              "Red": 154,
+              "Green": 230,
+              "Blue": 36
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text",
+            "X": 6,
+            "Y": 4,
+            "Width": 130,
+            "Height": 25,
+            "TextId": "__SingleUse_7SO4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_510H",
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          }
+        ],
+        "Interactions": [],
+        "CustomTriggers": [
+          {
+            "Name": "trigger1"
+          }
+        ]
+      },
+      {
         "Name": "CustomContainerTableLog",
         "Width": 750,
         "Height": 20,
@@ -4042,7 +5004,7 @@
             "Type": "BoxWithBorder",
             "Name": "boxWithBorderUnit",
             "X": 450,
-            "Width": 50,
+            "Width": 70,
             "Height": 20,
             "Color": {
               "Red": 255,
@@ -4054,8 +5016,8 @@
           {
             "Type": "BoxWithBorder",
             "Name": "boxWithBorderStCur",
-            "X": 500,
-            "Width": 100,
+            "X": 520,
+            "Width": 80,
             "Height": 20,
             "Color": {
               "Red": 255,
@@ -4169,7 +5131,7 @@
             "Type": "TextArea",
             "Name": "textAreaUnit",
             "X": 450,
-            "Width": 50,
+            "Width": 70,
             "Height": 19,
             "TextId": "__SingleUse_YDSR",
             "TextRotation": "0",
@@ -4182,8 +5144,8 @@
           {
             "Type": "TextArea",
             "Name": "textAreaStCur",
-            "X": 500,
-            "Width": 100,
+            "X": 520,
+            "Width": 80,
             "Height": 19,
             "TextId": "__SingleUse_IJ1U",
             "TextRotation": "0",
@@ -4225,21 +5187,17 @@
         "Interactions": []
       },
       {
-        "Name": "ConfigListFilterLog",
-        "Width": 186,
-        "Height": 189,
+        "Name": "CustomContainerTableLog_Type2",
+        "Width": 750,
+        "Height": 20,
         "Components": [
           {
             "Type": "BoxWithBorder",
-            "Name": "boxBg",
-            "Width": 186,
-            "Height": 480,
+            "Name": "boxWithBorderChan",
+            "X": 150,
+            "Width": 50,
+            "Height": 20,
             "Color": {
-              "Red": 71,
-              "Green": 71,
-              "Blue": 71
-            },
-            "BorderColor": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
@@ -4247,86 +5205,268 @@
             "BorderSize": 1
           },
           {
-            "Type": "ScrollList",
-            "Name": "scrollList",
-            "Width": 186,
-            "Height": 480,
-            "IsCircular": true,
-            "ItemTemplateName": "ListTile",
-            "NumberofItems": 32,
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 1.0,
-            "DragAcceleration": 1.0
-          }
-        ],
-        "Interactions": [],
-        "CustomTriggers": [
-          {
-            "Name": "trigger1"
-          }
-        ]
-      },
-      {
-        "Name": "ListTile",
-        "Width": 186,
-        "Height": 32,
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "boxBg_1",
-            "X": 1,
-            "Y": 1,
-            "Width": 184,
-            "Height": 30,
-            "Visible": false,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "boxBg",
-            "X": 1,
-            "Y": 1,
-            "Width": 184,
-            "Height": 30,
-            "Visible": false,
-            "Color": {
-              "Red": 154,
-              "Green": 230,
-              "Blue": 36
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "text",
-            "X": 6,
-            "Y": 4,
-            "Width": 130,
-            "Height": 25,
-            "TextId": "__SingleUse_7SO4",
-            "TextRotation": "0",
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorderDataTime",
+            "Width": 150,
+            "Height": 20,
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorderThreshold_1",
+            "X": 200,
+            "Width": 50,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorderThreshold_2",
+            "X": 250,
+            "Width": 50,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorderThreshold_3",
+            "X": 300,
+            "Width": 50,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorderFullScale",
+            "X": 350,
+            "Width": 50,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorderHysteresis",
+            "X": 400,
+            "Width": 50,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorderUnit",
+            "X": 450,
+            "Width": 70,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorderGas",
+            "X": 520,
+            "Width": 100,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorderTag",
+            "X": 620,
+            "Width": 130,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaDataTime",
+            "Width": 150,
+            "Height": 19,
+            "TextId": "__SingleUse_MZ3L",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 3,
+              "Green": 2,
+              "Blue": 2
+            },
+            "LineSpacing": 1,
             "Wildcard1": {
-              "TextId": "__SingleUse_510H",
+              "TextId": "__SingleUse_RKAI",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaNumChan",
+            "X": 150,
+            "Width": 50,
+            "Height": 19,
+            "TextId": "__SingleUse_ZVG0",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_BM4F",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaThreshold_1",
+            "X": 200,
+            "Width": 50,
+            "Height": 19,
+            "TextId": "__SingleUse_29R3",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_8OHI",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaThreshold_2",
+            "X": 250,
+            "Width": 50,
+            "Height": 19,
+            "TextId": "__SingleUse_NWXO",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_OPQ9",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaThreshold_3",
+            "X": 300,
+            "Width": 50,
+            "Height": 19,
+            "TextId": "__SingleUse_KSWU",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_8DMT",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaFullScale",
+            "X": 350,
+            "Width": 50,
+            "Height": 19,
+            "TextId": "__SingleUse_MKVX",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_F638",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaFullHysteresis",
+            "X": 400,
+            "Width": 50,
+            "Height": 19,
+            "TextId": "__SingleUse_9XVJ",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_456D",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaUnit",
+            "X": 450,
+            "Width": 70,
+            "Height": 19,
+            "TextId": "__SingleUse_WHJ0",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_MUZ6",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaGas",
+            "X": 520,
+            "Width": 100,
+            "Height": 19,
+            "TextId": "__SingleUse_FGQS",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_0JHY",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaTag",
+            "X": 620,
+            "Width": 130,
+            "Height": 19,
+            "TextId": "__SingleUse_YDUD",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_HOCZ",
               "UseBuffer": true,
               "BufferSize": 16
             }
           }
         ],
-        "Interactions": [],
-        "CustomTriggers": [
-          {
-            "Name": "trigger1"
-          }
-        ]
+        "Interactions": []
       }
     ],
     "Name": "MyApplication_log",

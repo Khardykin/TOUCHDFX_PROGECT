@@ -16,10 +16,9 @@ public:
 
     virtual void initialize();
 
-    void UpdateLog_1(TileInfoTypeDef * data);
-    void UpdateLog_1_clear(void);
+    void UpdateLog(TileInfoTypeDef * data);
+    void UpdateLog_clear(void);
 
-    void UpdateLog_2(ContainerInfoTypeDef * data);
 protected:
     touchgfx::Unicode::UnicodeChar NamesTypeChannel[2][10] = {
     		{0x041F, 0x0435, 0x0442, 0x043B, 0x044F},//Петля

@@ -34,12 +34,12 @@ CustomContainerTableLogBase::CustomContainerTableLogBase()
     boxWithBorderConc.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     boxWithBorderConc.setBorderSize(1);
 
-    boxWithBorderUnit.setPosition(450, 0, 50, 20);
+    boxWithBorderUnit.setPosition(450, 0, 70, 20);
     boxWithBorderUnit.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     boxWithBorderUnit.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     boxWithBorderUnit.setBorderSize(1);
 
-    boxWithBorderStCur.setPosition(500, 0, 100, 20);
+    boxWithBorderStCur.setPosition(520, 0, 80, 20);
     boxWithBorderStCur.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     boxWithBorderStCur.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     boxWithBorderStCur.setBorderSize(1);
@@ -89,14 +89,14 @@ CustomContainerTableLogBase::CustomContainerTableLogBase()
     textAreaConc.setWildcard(textAreaConcBuffer);
     textAreaConc.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Q6FU));
 
-    textAreaUnit.setPosition(450, 0, 50, 19);
+    textAreaUnit.setPosition(450, 0, 70, 19);
     textAreaUnit.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textAreaUnit.setLinespacing(0);
     Unicode::snprintf(textAreaUnitBuffer, TEXTAREAUNIT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_LNEH).getText());
     textAreaUnit.setWildcard(textAreaUnitBuffer);
     textAreaUnit.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YDSR));
 
-    textAreaStCur.setPosition(500, 0, 100, 19);
+    textAreaStCur.setPosition(520, 0, 80, 19);
     textAreaStCur.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textAreaStCur.setLinespacing(0);
     Unicode::snprintf(textAreaStCurBuffer, TEXTAREASTCUR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_83ZL).getText());

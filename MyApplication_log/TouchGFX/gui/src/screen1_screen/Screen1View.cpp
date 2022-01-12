@@ -8,6 +8,8 @@
 #include <mb_regs_decoder.h>
 #endif
 
+#define TEST_COUNT_LOG
+
 #include "time.h"
 
 Screen1View::Screen1View():
@@ -27,8 +29,11 @@ void Screen1View::setupScreen()
     static struct tm timeptr;
     read_start_stop_state_archiv(&time_start_fil, &time_stop_fil);
 
-    time_stop_fil = 1735039935;
-    time_start_fil = time_stop_fil;
+    //-----
+    //Test data filter
+//    time_stop_fil = 1735039935;
+//    time_start_fil = time_stop_fil;
+    //-----
     tmp = time_stop_fil;
 	timeptr = *gmtime(&tmp);
 	dateSelectorContainerStop.setPosition(250, 50, modalWindow1.getWidth(), modalWindow1.getHeight());
@@ -41,6 +46,10 @@ void Screen1View::setupScreen()
     dateSelectorContainerStart.setDate(timeptr.tm_year, timeptr.tm_mon, timeptr.tm_mday);
     modalWindow1.add(dateSelectorContainerStart);
     functionOkFilDataTime();
+
+    for(uint8_t i = 0; i < 10; i++){
+		mas_ContainerTableLog[i]->setVisible(false);
+	}
     //----------------------------------------------------------------------
     channel_num_fil = 0;
     ch_type_fil 	= 0;
@@ -91,10 +100,13 @@ void Screen1View::functionReadLog()
 	first_page_table = 1;
 	position = 0;
 	time_start_back = time_start_fil;
-
+#ifdef TEST_COUNT_LOG
+	// Для теста
 	search_count_log = 50;
-//	search_count_log = recording_of_logs_found_by_the_filter_to_file(50, type_log_fil, &time_start_back, time_stop_fil,
-//			&position, channel_num_fil, loop_state_fil, thld_state_fil, err_state_fil, ch_type_fil,  units_fil,  formula_fil);
+#else
+	search_count_log = recording_of_logs_found_by_the_filter_to_file(50, type_log_fil, &time_start_back, time_stop_fil,
+			&position, channel_num_fil, loop_state_fil, thld_state_fil, err_state_fil, ch_type_fil,  units_fil,  formula_fil);
+#endif
 	if(search_count_log){
 		listLayoutPageButton.setVisible(true);
 		listLayoutLogTable.setVisible(true);
@@ -135,11 +147,11 @@ void Screen1View::functionReadLog()
 			flexButtonPage_2.setVisible(true);
 		}
 		PageRefresh();
-
 	}
 	else{
 		listLayoutPageButton.setVisible(false);
 		listLayoutLogTable.setVisible(false);
+		invalidate();
 	}
 
 
@@ -228,10 +240,15 @@ void Screen1View::PageRefresh()
 		flexButtonPageBack.setVisible(true);
 	}
 
+	// Докачивание архива если количество запрашиваемых логов больше, чем считано
 	if((current_page_table*10) > search_count_log){
+#ifdef TEST_COUNT_LOG
+		//Для теста
 		search_count_log += 10;
-		//	search_count_log += recording_of_logs_found_by_the_filter_to_file(10, type_log_fil, &time_start_back, time_stop_fil,
-		//			&position, channel_num_fil, loop_state_fil, thld_state_fil, err_state_fil, ch_type_fil,  units_fil,  formula_fil);
+#else
+		search_count_log += recording_of_logs_found_by_the_filter_to_file(10, type_log_fil, &time_start_back, time_stop_fil,
+				&position, channel_num_fil, loop_state_fil, thld_state_fil, err_state_fil, ch_type_fil,  units_fil,  formula_fil);
+#endif
 		if((current_page_table*10) != search_count_log){
 			flexButtonPageForward.setVisible(false);
 		}
@@ -244,6 +261,8 @@ void Screen1View::PageRefresh()
 		flexButtonPageForward.setVisible(true);
 	}
 
+
+	// Смена цвета кнопок обозначения страницы текущей и др
 	flexButtonPage_1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204),
 				touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
 	flexButtonPage_2.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204),
@@ -281,24 +300,29 @@ void Screen1View::PageRefresh()
 		break;
 	}
 
+	// Обновление контейнеров содержащие логи
 	for(uint8_t i = 0; i < 10; i++){
 		if(parce_found_logs(data_log, ((current_page_table - 1)*10) + i)){
 			if(type_log_fil == TYPE_LOG_READINGS){
-				mas_ContainerTableLog[i]->UpdateLog_1(Event_log_readings_ptr);
+				mas_ContainerTableLog[i]->UpdateLog(Event_log_readings_ptr);
 			}
 			else if(type_log_fil == TYPE_LOG_PARAM_UPDATE){
-				//customContainerTableLog_0.UpdateLog_2(Event_log_param_update_ptr);
+				mas_ContainerTableLog_Type2[i]->UpdateLog(Event_log_param_update_ptr);
 			}
 		}
 		else{
 			if(type_log_fil == TYPE_LOG_READINGS){
 				mas_ContainerTableLog[i]->setVisible(false);
 			}
+			else if(type_log_fil == TYPE_LOG_PARAM_UPDATE){
+				mas_ContainerTableLog_Type2[i]->setVisible(false);
+			}
 		}
 	}
 	invalidate();
 }
-
+//=================================================================================================
+//LOG TYPE 1
 //=================================================================================================
 // Фильтр по дате
 void Screen1View::functionOkFilDataTime(void)
@@ -344,13 +368,14 @@ void Screen1View::functionFilterDate(void)
 //=================================================================================================
 void Screen1View::functionFilterNum(void)
 {
-	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterNum;
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button = &flexButtonFilterNum;
+	touchgfx::ListLayout *listButton = &listLayoutButtonFilter;
+	touchgfx::ListLayout *listTable = &listLayoutLogTable;
 	ConfigListFilterLog *list = &ListFilterLog_Num;
 	if(list->isVisible() == false)
 	{
-		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
-		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
-		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->moveTo(listButton->getX() + button->getX(), listButton->getY() + listButton->getHeight());
+		list->resizeXY(button->getWidth(), listTable->getHeight());
 		list->setVisible(true);
 	}
 	else{
@@ -367,15 +392,42 @@ void Screen1View::functionFilterNum(void)
 
 }
 
+void Screen1View::functionFilterNum_Type2(void)
+{
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button = &flexButtonFilterNum_Type2;
+	touchgfx::ListLayout *listButton = &listLayoutButtonFilter_Type2;
+	touchgfx::ListLayout *listTable = &listLayoutLogTable_Type2;
+	ConfigListFilterLog *list = &ListFilterLog_Num;
+	if(list->isVisible() == false)
+	{
+		list->moveTo(listButton->getX() + button->getX(), listButton->getY() + listButton->getHeight());
+		list->resizeXY(button->getWidth(), listTable->getHeight());
+		list->setVisible(true);
+	}
+	else{
+		list->moveTo(800, 0);
+		list->setVisible(false);
+	}
+	list->invalidate();
+	if(channel_num_fil){
+		Unicode::snprintf(flexButtonFilterNum_Type2Buffer2, FLEXBUTTONFILTERNUM_TYPE2BUFFER2_SIZE, "+");
+	}
+	else{
+		Unicode::snprintf(flexButtonFilterNum_Type2Buffer2, FLEXBUTTONFILTERNUM_TYPE2BUFFER2_SIZE, " ");
+	}
+
+}
+
 void Screen1View::functionFilterTypeChannel(void)
 {
-	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterTypeChannel;
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button = &flexButtonFilterTypeChannel;
+	touchgfx::ListLayout *listButton = &listLayoutButtonFilter;
+	touchgfx::ListLayout *listTable = &listLayoutLogTable;
 	ConfigListFilterLog *list = &ListFilterLog_TypeChan;
 	if(list->isVisible() == false)
 	{
-		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
-		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
-		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->moveTo(listButton->getX() + button->getX(), listButton->getY() + listButton->getHeight());
+		list->resizeXY(button->getWidth(), listTable->getHeight());
 		list->setVisible(true);
 	}
 	else{
@@ -393,21 +445,21 @@ void Screen1View::functionFilterTypeChannel(void)
 
 void Screen1View::functionFilterStLoop(void)
 {
-	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterStLoop;
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button = &flexButtonFilterStLoop;
+	touchgfx::ListLayout *listButton = &listLayoutButtonFilter;
+	touchgfx::ListLayout *listTable = &listLayoutLogTable;
 	ConfigListFilterLog *list = &ListFilterLog_StLoop;
 	if(list->isVisible() == false)
 	{
-		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
-		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
-		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->moveTo(listButton->getX() + button->getX(), listButton->getY() + listButton->getHeight());
+		list->resizeXY(button->getWidth(), listTable->getHeight());
 		list->setVisible(true);
-		list->invalidate();
 	}
 	else{
 		list->moveTo(800, 0);
 		list->setVisible(false);
-		list->invalidate();
 	}
+	list->invalidate();
 	if(loop_state_fil){
 		Unicode::snprintf(flexButtonFilterStLoopBuffer2, FLEXBUTTONFILTERSTLOOPBUFFER2_SIZE, "+");
 	}
@@ -418,13 +470,14 @@ void Screen1View::functionFilterStLoop(void)
 
 void Screen1View::functionFilterUnit(void)
 {
-	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterUnit;
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button = &flexButtonFilterUnit;
+	touchgfx::ListLayout *listButton = &listLayoutButtonFilter;
+	touchgfx::ListLayout *listTable = &listLayoutLogTable;
 	ConfigListFilterLog *list = &ListFilterLog_Unit;
 	if(list->isVisible() == false)
 	{
-		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
-		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
-		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->moveTo(listButton->getX() + button->getX(), listButton->getY() + listButton->getHeight());
+		list->resizeXY(button->getWidth(), listTable->getHeight());
 		list->setVisible(true);
 	}
 	else{
@@ -440,15 +493,41 @@ void Screen1View::functionFilterUnit(void)
 	}
 }
 
+void Screen1View::functionFilterUnit_Type2(void)
+{
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button = &flexButtonFilterUnit_Type2;
+	touchgfx::ListLayout *listButton = &listLayoutButtonFilter_Type2;
+	touchgfx::ListLayout *listTable = &listLayoutLogTable_Type2;
+	ConfigListFilterLog *list = &ListFilterLog_Unit;
+	if(list->isVisible() == false)
+	{
+		list->moveTo(listButton->getX() + button->getX(), listButton->getY() + listButton->getHeight());
+		list->resizeXY(button->getWidth(), listTable->getHeight());
+		list->setVisible(true);
+	}
+	else{
+		list->moveTo(800, 0);
+		list->setVisible(false);
+	}
+	list->invalidate();
+	if(units_fil){
+		Unicode::snprintf(flexButtonFilterUnit_Type2Buffer2, FLEXBUTTONFILTERUNIT_TYPE2BUFFER2_SIZE, "+");
+	}
+	else{
+		Unicode::snprintf(flexButtonFilterUnit_Type2Buffer2, FLEXBUTTONFILTERUNIT_TYPE2BUFFER2_SIZE, " ");
+	}
+}
+
 void Screen1View::functionFilterThreshold(void)
 {
-	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterThreshold;
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button = &flexButtonFilterThreshold;
+	touchgfx::ListLayout *listButton = &listLayoutButtonFilter;
+	touchgfx::ListLayout *listTable = &listLayoutLogTable;
 	ConfigListFilterLog *list = &ListFilterLog_StCur;
 	if(list->isVisible() == false)
 	{
-		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
-		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
-		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->moveTo(listButton->getX() + button->getX(), listButton->getY() + listButton->getHeight());
+		list->resizeXY(button->getWidth(), listTable->getHeight());
 		list->setVisible(true);
 	}
 	else{
@@ -466,13 +545,14 @@ void Screen1View::functionFilterThreshold(void)
 
 void Screen1View::functionFilterErr(void)
 {
-	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterErr;
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button = &flexButtonFilterErr;
+	touchgfx::ListLayout *listButton = &listLayoutButtonFilter;
+	touchgfx::ListLayout *listTable = &listLayoutLogTable;
 	ConfigListFilterLog *list = &ListFilterLog_Err;
 	if(list->isVisible() == false)
 	{
-		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
-		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
-		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->moveTo(listButton->getX() + button->getX(), listButton->getY() + listButton->getHeight());
+		list->resizeXY(button->getWidth(), listTable->getHeight());
 		list->setVisible(true);
 	}
 	else{
@@ -490,13 +570,14 @@ void Screen1View::functionFilterErr(void)
 
 void Screen1View::functionFilterGas(void)
 {
-	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button_list = &flexButtonFilterGas;
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button = &flexButtonFilterGas;
+	touchgfx::ListLayout *listButton = &listLayoutButtonFilter;
+	touchgfx::ListLayout *listTable = &listLayoutLogTable;
 	ConfigListFilterLog *list = &ListFilterLog_Gas;
 	if(list->isVisible() == false)
 	{
-		list->moveTo(button_list->getX(), button_list->getY() + button_list->getHeight());
-		list->resizeXY(button_list->getWidth(), button_list->getY() + button_list->getHeight());
-		list->setWidthHeight(button_list->getWidth(), listLayoutLogTable.getHeight());
+		list->moveTo(listButton->getX() + button->getX(), listButton->getY() + listButton->getHeight());
+		list->resizeXY(button->getWidth(), listTable->getHeight());
 		list->setVisible(true);
 	}
 	else{
@@ -512,6 +593,112 @@ void Screen1View::functionFilterGas(void)
 	}
 }
 
+void Screen1View::functionFilterGas_Type2(void)
+{
+	touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > *button = &flexButtonFilterGas_Type2;
+	touchgfx::ListLayout *listButton = &listLayoutButtonFilter_Type2;
+	touchgfx::ListLayout *listTable = &listLayoutLogTable_Type2;
+	ConfigListFilterLog *list = &ListFilterLog_Gas;
+	if(list->isVisible() == false)
+	{
+		list->moveTo(listButton->getX() + button->getX(), listButton->getY() + listButton->getHeight());
+		list->resizeXY(button->getWidth(), listTable->getHeight());
+		list->setVisible(true);
+	}
+	else{
+		list->moveTo(800, 0);
+		list->setVisible(false);
+	}
+	list->invalidate();
+	if(formula_fil){
+		Unicode::snprintf(flexButtonFilterGas_Type2Buffer2, FLEXBUTTONFILTERGAS_TYPE2BUFFER2_SIZE, "+");
+	}
+	else{
+		Unicode::snprintf(flexButtonFilterGas_Type2Buffer2, FLEXBUTTONFILTERGAS_TYPE2BUFFER2_SIZE, " ");
+	}
+}
+
+//=================================================================================================
+//Фильтр по типу логов
+void Screen1View::functionTurnLog1(void)
+{
+	type_log_fil = TYPE_LOG_READINGS;
+	flexButtonTurnLog1			.setVisible(false);
+	flexButtonTurnLog2			.setVisible(true);
+	listLayoutButtonFilter		.moveTo(32, 141);
+	listLayoutLogTable			.moveTo(32, 200);
+	listLayoutButtonFilter		.setVisible(true);
+	listLayoutLogTable			.setVisible(true);
+
+	listLayoutButtonFilter_Type2.moveTo(32, 480);
+	listLayoutLogTable_Type2	.moveTo(32, 540);
+	listLayoutButtonFilter_Type2.setVisible(false);
+	listLayoutLogTable_Type2	.setVisible(false);
+
+	ListFilterLog_Num			.moveTo(800, 0);
+	ListFilterLog_TypeChan		.moveTo(800, 0);
+	ListFilterLog_StLoop		.moveTo(800, 0);
+	ListFilterLog_Unit			.moveTo(800, 0);
+	ListFilterLog_StCur			.moveTo(800, 0);
+	ListFilterLog_Err			.moveTo(800, 0);
+	ListFilterLog_Gas			.moveTo(800, 0);
+
+	ListFilterLog_Num			.setVisible(false);
+	ListFilterLog_TypeChan		.setVisible(false);
+	ListFilterLog_StLoop		.setVisible(false);
+	ListFilterLog_Unit			.setVisible(false);
+	ListFilterLog_StCur			.setVisible(false);
+	ListFilterLog_Err			.setVisible(false);
+	ListFilterLog_Gas			.setVisible(false);
+
+	for(uint8_t i = 0; i < 10; i++){
+		mas_ContainerTableLog[i]->setVisible(false);
+	}
+
+	invalidate();
+
+//	functionReadLog();
+}
+
+void Screen1View::functionTurnLog2(void)
+{
+	type_log_fil = TYPE_LOG_PARAM_UPDATE;
+	flexButtonTurnLog1			.setVisible(true);
+	flexButtonTurnLog2			.setVisible(false);
+	listLayoutButtonFilter_Type2.moveTo(32, 141);
+	listLayoutLogTable_Type2	.moveTo(32, 200);
+	listLayoutButtonFilter_Type2.setVisible(true);
+	listLayoutLogTable_Type2	.setVisible(true);
+
+	listLayoutButtonFilter		.moveTo(32, 480);
+	listLayoutLogTable			.moveTo(32, 540);
+	listLayoutButtonFilter		.setVisible(false);
+	listLayoutLogTable			.setVisible(false);
+
+	ListFilterLog_Num			.moveTo(800, 0);
+	ListFilterLog_TypeChan		.moveTo(800, 0);
+	ListFilterLog_StLoop		.moveTo(800, 0);
+	ListFilterLog_Unit			.moveTo(800, 0);
+	ListFilterLog_StCur			.moveTo(800, 0);
+	ListFilterLog_Err			.moveTo(800, 0);
+	ListFilterLog_Gas			.moveTo(800, 0);
+
+	ListFilterLog_Num			.setVisible(false);
+	ListFilterLog_TypeChan		.setVisible(false);
+	ListFilterLog_StLoop		.setVisible(false);
+	ListFilterLog_Unit			.setVisible(false);
+	ListFilterLog_StCur			.setVisible(false);
+	ListFilterLog_Err			.setVisible(false);
+	ListFilterLog_Gas			.setVisible(false);
+
+	for(uint8_t i = 0; i < 10; i++){
+		mas_ContainerTableLog_Type2[i]->setVisible(false);
+	}
+
+	invalidate();
+
+//	functionReadLog();
+}
 //=================================================================================================
 void Screen1View::handleListItemSelected(uint8_t list_item, ConfigListFilterLog* list)
 {

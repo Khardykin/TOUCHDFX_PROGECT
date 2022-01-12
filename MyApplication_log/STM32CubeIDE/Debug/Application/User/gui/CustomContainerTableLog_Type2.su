@@ -1,0 +1,17 @@
+Drawable.hpp:298:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:310:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:339:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:351:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:361:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:372:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+Drawable.hpp:383:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:471:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:481:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+Drawable.hpp:568:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
+CustomContainerTableLog_Type2.hpp:14:13:CustomContainerTableLog_Type2::~CustomContainerTableLog_Type2()	0	static
+CustomContainerTableLog_Type2.cpp:17:6:virtual void CustomContainerTableLog_Type2::initialize()	0	static
+CustomContainerTableLog_Type2.hpp:14:13:virtual CustomContainerTableLog_Type2::~CustomContainerTableLog_Type2()	8	static
+CustomContainerTableLog_Type2.cpp:12:1:CustomContainerTableLog_Type2::CustomContainerTableLog_Type2()	8	static
+CustomContainerTableLog_Type2.cpp:22:6:void CustomContainerTableLog_Type2::UpdateLog_clear()	0	static
+CustomContainerTableLog_Type2.cpp:28:6:void CustomContainerTableLog_Type2::UpdateLog(ContainerInfoTypeDef*)	40	static

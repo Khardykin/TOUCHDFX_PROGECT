@@ -52,6 +52,7 @@ typedef struct//
 	uint8_t 			error_state;
 	uint8_t 			ch_on;
 	uint8_t 			formula;
+	char 				buf_tag[16];
 }ContainerInfoTypeDef;
 //========================================================================================
 

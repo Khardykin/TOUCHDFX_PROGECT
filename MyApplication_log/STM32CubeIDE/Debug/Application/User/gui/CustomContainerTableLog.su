@@ -10,9 +10,8 @@ Drawable.hpp:481:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
 Drawable.hpp:568:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
 Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
 CustomContainerTableLog.hpp:15:13:CustomContainerTableLog::~CustomContainerTableLog()	0	static
-CustomContainerTableLog.cpp:14:6:virtual void CustomContainerTableLog::initialize()	0	static
+CustomContainerTableLog.cpp:17:6:virtual void CustomContainerTableLog::initialize()	0	static
 CustomContainerTableLog.hpp:15:13:virtual CustomContainerTableLog::~CustomContainerTableLog()	8	static
-CustomContainerTableLog.cpp:9:1:CustomContainerTableLog::CustomContainerTableLog()	16	static
-CustomContainerTableLog.cpp:19:6:void CustomContainerTableLog::UpdateLog_1(TileInfoTypeDef*)	32	static
-CustomContainerTableLog.cpp:49:6:void CustomContainerTableLog::UpdateLog_1_clear()	0	static
-CustomContainerTableLog.cpp:55:6:void CustomContainerTableLog::UpdateLog_2(ContainerInfoTypeDef*)	0	static
+CustomContainerTableLog.cpp:12:1:CustomContainerTableLog::CustomContainerTableLog()	16	static
+CustomContainerTableLog.cpp:22:6:void CustomContainerTableLog::UpdateLog(TileInfoTypeDef*)	40	static
+CustomContainerTableLog.cpp:52:6:void CustomContainerTableLog::UpdateLog_clear()	0	static

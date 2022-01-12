@@ -45,7 +45,8 @@ Application/User/gui/CustomContainerTableLog.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../../Core/Inc/parce_archiv.h ../../Core/Inc/time.h
+ ../../Core/Inc/parce_archiv.h ../../Core/Inc/time.h \
+ ../../Core/Inc/mb_regs_decoder.h
 
 ../../TouchGFX/gui/include/gui/containers/CustomContainerTableLog.hpp:
 
@@ -140,3 +141,5 @@ Application/User/gui/CustomContainerTableLog.o: \
 ../../Core/Inc/parce_archiv.h:
 
 ../../Core/Inc/time.h:
+
+../../Core/Inc/mb_regs_decoder.h:

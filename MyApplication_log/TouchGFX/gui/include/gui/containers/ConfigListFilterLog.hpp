@@ -47,7 +47,7 @@ protected:
 
 private:
     uint8_t previousIndex;
-    uint32_t currentIndex;
+    uint64_t currentIndex;
     int highlighted_box_width;
 
     ListID list_id = ListID::list_channel;

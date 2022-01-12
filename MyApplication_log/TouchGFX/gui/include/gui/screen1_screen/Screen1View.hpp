@@ -33,12 +33,18 @@ public:
 
 	void functionFilterDate(void);
 	void functionFilterNum(void);
+	void functionFilterNum_Type2(void);
 	void functionFilterTypeChannel(void);
 	void functionFilterStLoop(void);
 	void functionFilterUnit(void);
+	void functionFilterUnit_Type2(void);
 	void functionFilterThreshold(void);
 	void functionFilterErr(void);
 	void functionFilterGas(void);
+	void functionFilterGas_Type2(void);
+
+	void functionTurnLog1(void);
+	void functionTurnLog2(void);
 
 
 	void handleListItemSelected(uint8_t list_item, ConfigListFilterLog* list);
@@ -88,6 +94,19 @@ protected:
 			&customContainerTableLog_8,
 			&customContainerTableLog_9,
 	};
+
+	CustomContainerTableLog_Type2 *mas_ContainerTableLog_Type2[10] = {
+				&customContainerTableLog_Type2_0,
+				&customContainerTableLog_Type2_1,
+				&customContainerTableLog_Type2_2,
+				&customContainerTableLog_Type2_3,
+				&customContainerTableLog_Type2_4,
+				&customContainerTableLog_Type2_5,
+				&customContainerTableLog_Type2_6,
+				&customContainerTableLog_Type2_7,
+				&customContainerTableLog_Type2_8,
+				&customContainerTableLog_Type2_9,
+		};
 
 
 };

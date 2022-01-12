@@ -375,6 +375,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/CustomContainerTableLog.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/CustomContainerTableLog_Type2.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/CustomContainerTableLog_Type2.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/ListTile.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/ListTile.cpp</locationURI>
@@ -518,6 +523,11 @@
 			<name>Application/User/generated/CustomContainerTableLogBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/CustomContainerTableLogBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/CustomContainerTableLog_Type2Base.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/CustomContainerTableLog_Type2Base.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/ListTileBase.cpp</name>

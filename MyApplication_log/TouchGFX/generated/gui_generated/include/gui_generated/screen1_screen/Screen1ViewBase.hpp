@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/containers/ListLayout.hpp>
+#include <gui/containers/CustomContainerTableLog_Type2.hpp>
 #include <gui/containers/CustomContainerTableLog.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
@@ -113,6 +114,36 @@ public:
         // Override and implement this function in Screen1
     }
 
+    virtual void functionFilterDate_Type2()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionFilterNum_Type2()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionFilterUnit_Type2()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionFilterGas_Type2()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionTurnLog1()
+    {
+        // Override and implement this function in Screen1
+    }
+
+    virtual void functionTurnLog2()
+    {
+        // Override and implement this function in Screen1
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -123,6 +154,17 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::BoxWithBorder boxWithBorder1;
+    touchgfx::ListLayout listLayoutLogTable_Type2;
+    CustomContainerTableLog_Type2 customContainerTableLog_Type2_0;
+    CustomContainerTableLog_Type2 customContainerTableLog_Type2_1;
+    CustomContainerTableLog_Type2 customContainerTableLog_Type2_2;
+    CustomContainerTableLog_Type2 customContainerTableLog_Type2_3;
+    CustomContainerTableLog_Type2 customContainerTableLog_Type2_4;
+    CustomContainerTableLog_Type2 customContainerTableLog_Type2_5;
+    CustomContainerTableLog_Type2 customContainerTableLog_Type2_6;
+    CustomContainerTableLog_Type2 customContainerTableLog_Type2_7;
+    CustomContainerTableLog_Type2 customContainerTableLog_Type2_8;
+    CustomContainerTableLog_Type2 customContainerTableLog_Type2_9;
     touchgfx::ListLayout listLayoutLogTable;
     CustomContainerTableLog customContainerTableLog_0;
     CustomContainerTableLog customContainerTableLog_1;
@@ -144,6 +186,27 @@ protected:
     touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonPage_4;
     touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonPage_5;
     touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonPageForward;
+    touchgfx::ListLayout listLayoutButtonFilter_Type2;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterData_Type2;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterNum_Type2;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterThreshold_1_Type2;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterThreshold_2_Type2;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterThreshold_3_Type2;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterFullScale_Type2;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterHysteresis_Type2;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterUnit_Type2;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterGas_Type2;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterTag_Type2;
+    touchgfx::ListLayout listLayoutButtonFilter;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterData;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterNum;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterTypeChannel;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterStLoop;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterConc;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterUnit;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterThreshold;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterErr;
+    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterGas;
     ConfigListFilterLog ListFilterLog_Gas;
     ConfigListFilterLog ListFilterLog_Err;
     ConfigListFilterLog ListFilterLog_StCur;
@@ -151,15 +214,6 @@ protected:
     ConfigListFilterLog ListFilterLog_StLoop;
     ConfigListFilterLog ListFilterLog_TypeChan;
     ConfigListFilterLog ListFilterLog_Num;
-    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterGas;
-    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterErr;
-    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterThreshold;
-    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterUnit;
-    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterConc;
-    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterStLoop;
-    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterTypeChannel;
-    touchgfx::TwoWildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterNum;
-    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonFilterData;
     touchgfx::TextAreaWithOneWildcard textAreaStartDate;
     touchgfx::TextAreaWithOneWildcard textAreaStopDate;
     touchgfx::ModalWindow modalWindow1;
@@ -167,6 +221,8 @@ protected:
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonExitFilDataTime;
     touchgfx::TextAreaWithOneWildcard textAreaDataStart;
     touchgfx::TextAreaWithOneWildcard textAreaDataStop;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonTurnLog1;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > flexButtonTurnLog2;
 
     /*
      * Wildcard Buffers
@@ -193,38 +249,74 @@ protected:
     touchgfx::Unicode::UnicodeChar flexButtonPage_5Buffer[FLEXBUTTONPAGE_5_SIZE];
     static const uint16_t FLEXBUTTONPAGEFORWARD_SIZE = 10;
     touchgfx::Unicode::UnicodeChar flexButtonPageForwardBuffer[FLEXBUTTONPAGEFORWARD_SIZE];
-    static const uint16_t FLEXBUTTONFILTERGASBUFFER1_SIZE = 15;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterGasBuffer1[FLEXBUTTONFILTERGASBUFFER1_SIZE];
-    static const uint16_t FLEXBUTTONFILTERGASBUFFER2_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterGasBuffer2[FLEXBUTTONFILTERGASBUFFER2_SIZE];
-    static const uint16_t FLEXBUTTONFILTERERRBUFFER1_SIZE = 15;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterErrBuffer1[FLEXBUTTONFILTERERRBUFFER1_SIZE];
-    static const uint16_t FLEXBUTTONFILTERERRBUFFER2_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterErrBuffer2[FLEXBUTTONFILTERERRBUFFER2_SIZE];
-    static const uint16_t FLEXBUTTONFILTERTHRESHOLDBUFFER1_SIZE = 15;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterThresholdBuffer1[FLEXBUTTONFILTERTHRESHOLDBUFFER1_SIZE];
-    static const uint16_t FLEXBUTTONFILTERTHRESHOLDBUFFER2_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterThresholdBuffer2[FLEXBUTTONFILTERTHRESHOLDBUFFER2_SIZE];
-    static const uint16_t FLEXBUTTONFILTERUNITBUFFER1_SIZE = 15;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterUnitBuffer1[FLEXBUTTONFILTERUNITBUFFER1_SIZE];
-    static const uint16_t FLEXBUTTONFILTERUNITBUFFER2_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterUnitBuffer2[FLEXBUTTONFILTERUNITBUFFER2_SIZE];
-    static const uint16_t FLEXBUTTONFILTERCONC_SIZE = 15;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterConcBuffer[FLEXBUTTONFILTERCONC_SIZE];
-    static const uint16_t FLEXBUTTONFILTERSTLOOPBUFFER1_SIZE = 15;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterStLoopBuffer1[FLEXBUTTONFILTERSTLOOPBUFFER1_SIZE];
-    static const uint16_t FLEXBUTTONFILTERSTLOOPBUFFER2_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterStLoopBuffer2[FLEXBUTTONFILTERSTLOOPBUFFER2_SIZE];
-    static const uint16_t FLEXBUTTONFILTERTYPECHANNELBUFFER1_SIZE = 15;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterTypeChannelBuffer1[FLEXBUTTONFILTERTYPECHANNELBUFFER1_SIZE];
-    static const uint16_t FLEXBUTTONFILTERTYPECHANNELBUFFER2_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterTypeChannelBuffer2[FLEXBUTTONFILTERTYPECHANNELBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERDATA_TYPE2_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterData_Type2Buffer[FLEXBUTTONFILTERDATA_TYPE2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERNUM_TYPE2BUFFER1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterNum_Type2Buffer1[FLEXBUTTONFILTERNUM_TYPE2BUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERNUM_TYPE2BUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterNum_Type2Buffer2[FLEXBUTTONFILTERNUM_TYPE2BUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTHRESHOLD_1_TYPE2BUFFER1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterThreshold_1_Type2Buffer1[FLEXBUTTONFILTERTHRESHOLD_1_TYPE2BUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTHRESHOLD_1_TYPE2BUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterThreshold_1_Type2Buffer2[FLEXBUTTONFILTERTHRESHOLD_1_TYPE2BUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTHRESHOLD_2_TYPE2BUFFER1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterThreshold_2_Type2Buffer1[FLEXBUTTONFILTERTHRESHOLD_2_TYPE2BUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTHRESHOLD_2_TYPE2BUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterThreshold_2_Type2Buffer2[FLEXBUTTONFILTERTHRESHOLD_2_TYPE2BUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTHRESHOLD_3_TYPE2BUFFER1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterThreshold_3_Type2Buffer1[FLEXBUTTONFILTERTHRESHOLD_3_TYPE2BUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTHRESHOLD_3_TYPE2BUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterThreshold_3_Type2Buffer2[FLEXBUTTONFILTERTHRESHOLD_3_TYPE2BUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERFULLSCALE_TYPE2BUFFER1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterFullScale_Type2Buffer1[FLEXBUTTONFILTERFULLSCALE_TYPE2BUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERFULLSCALE_TYPE2BUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterFullScale_Type2Buffer2[FLEXBUTTONFILTERFULLSCALE_TYPE2BUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERHYSTERESIS_TYPE2_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterHysteresis_Type2Buffer[FLEXBUTTONFILTERHYSTERESIS_TYPE2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERUNIT_TYPE2BUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterUnit_Type2Buffer1[FLEXBUTTONFILTERUNIT_TYPE2BUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERUNIT_TYPE2BUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterUnit_Type2Buffer2[FLEXBUTTONFILTERUNIT_TYPE2BUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERGAS_TYPE2BUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterGas_Type2Buffer1[FLEXBUTTONFILTERGAS_TYPE2BUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERGAS_TYPE2BUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterGas_Type2Buffer2[FLEXBUTTONFILTERGAS_TYPE2BUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTAG_TYPE2BUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterTag_Type2Buffer1[FLEXBUTTONFILTERTAG_TYPE2BUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTAG_TYPE2BUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterTag_Type2Buffer2[FLEXBUTTONFILTERTAG_TYPE2BUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERDATA_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterDataBuffer[FLEXBUTTONFILTERDATA_SIZE];
     static const uint16_t FLEXBUTTONFILTERNUMBUFFER1_SIZE = 10;
     touchgfx::Unicode::UnicodeChar flexButtonFilterNumBuffer1[FLEXBUTTONFILTERNUMBUFFER1_SIZE];
     static const uint16_t FLEXBUTTONFILTERNUMBUFFER2_SIZE = 10;
     touchgfx::Unicode::UnicodeChar flexButtonFilterNumBuffer2[FLEXBUTTONFILTERNUMBUFFER2_SIZE];
-    static const uint16_t FLEXBUTTONFILTERDATA_SIZE = 15;
-    touchgfx::Unicode::UnicodeChar flexButtonFilterDataBuffer[FLEXBUTTONFILTERDATA_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTYPECHANNELBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterTypeChannelBuffer1[FLEXBUTTONFILTERTYPECHANNELBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTYPECHANNELBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterTypeChannelBuffer2[FLEXBUTTONFILTERTYPECHANNELBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERSTLOOPBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterStLoopBuffer1[FLEXBUTTONFILTERSTLOOPBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERSTLOOPBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterStLoopBuffer2[FLEXBUTTONFILTERSTLOOPBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERCONC_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterConcBuffer[FLEXBUTTONFILTERCONC_SIZE];
+    static const uint16_t FLEXBUTTONFILTERUNITBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterUnitBuffer1[FLEXBUTTONFILTERUNITBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERUNITBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterUnitBuffer2[FLEXBUTTONFILTERUNITBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTHRESHOLDBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterThresholdBuffer1[FLEXBUTTONFILTERTHRESHOLDBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERTHRESHOLDBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterThresholdBuffer2[FLEXBUTTONFILTERTHRESHOLDBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERERRBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterErrBuffer1[FLEXBUTTONFILTERERRBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERERRBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterErrBuffer2[FLEXBUTTONFILTERERRBUFFER2_SIZE];
+    static const uint16_t FLEXBUTTONFILTERGASBUFFER1_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterGasBuffer1[FLEXBUTTONFILTERGASBUFFER1_SIZE];
+    static const uint16_t FLEXBUTTONFILTERGASBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar flexButtonFilterGasBuffer2[FLEXBUTTONFILTERGASBUFFER2_SIZE];
 
 private:
 

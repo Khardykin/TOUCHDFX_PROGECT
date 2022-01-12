@@ -45,13 +45,15 @@ Application/User/gui/Screen1View.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
- ../../TouchGFX/gui/include/gui/containers/CustomContainerTableLog.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerTableLogBase.hpp \
+ ../../TouchGFX/gui/include/gui/containers/CustomContainerTableLog_Type2.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerTableLog_Type2Base.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../Core/Inc/parce_archiv.h \
+ ../../TouchGFX/gui/include/gui/containers/CustomContainerTableLog.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerTableLogBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
@@ -181,9 +183,9 @@ Application/User/gui/Screen1View.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
 
-../../TouchGFX/gui/include/gui/containers/CustomContainerTableLog.hpp:
+../../TouchGFX/gui/include/gui/containers/CustomContainerTableLog_Type2.hpp:
 
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerTableLogBase.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerTableLog_Type2Base.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
@@ -194,6 +196,10 @@ Application/User/gui/Screen1View.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
 ../../Core/Inc/parce_archiv.h:
+
+../../TouchGFX/gui/include/gui/containers/CustomContainerTableLog.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/CustomContainerTableLogBase.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 

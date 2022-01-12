@@ -22,23 +22,29 @@ AbstractButtonContainer.hpp:114:18:virtual void touchgfx::AbstractButtonContaine
 AbstractButtonContainer.hpp:119:18:virtual void touchgfx::AbstractButtonContainer::handleAlphaUpdated()	0	static
 AbstractButtonContainer.hpp:34:7:touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	0	static
 View.hpp:36:7:touchgfx::View<Screen1Presenter>::~View()	0	static
-Screen1ViewBase.hpp:31:18:virtual void Screen1ViewBase::functionFilterDate()	0	static
-Screen1ViewBase.hpp:36:18:virtual void Screen1ViewBase::functionReadLog()	0	static
-Screen1ViewBase.hpp:41:18:virtual void Screen1ViewBase::functionPageBack()	0	static
-Screen1ViewBase.hpp:46:18:virtual void Screen1ViewBase::functionPageForward()	0	static
-Screen1ViewBase.hpp:51:18:virtual void Screen1ViewBase::functionPage_1()	0	static
-Screen1ViewBase.hpp:56:18:virtual void Screen1ViewBase::functionPage_2()	0	static
-Screen1ViewBase.hpp:61:18:virtual void Screen1ViewBase::functionPage_3()	0	static
-Screen1ViewBase.hpp:66:18:virtual void Screen1ViewBase::functionPage_4()	0	static
-Screen1ViewBase.hpp:71:18:virtual void Screen1ViewBase::functionPage_5()	0	static
-Screen1ViewBase.hpp:76:18:virtual void Screen1ViewBase::functionOkFilDataTime()	0	static
-Screen1ViewBase.hpp:81:18:virtual void Screen1ViewBase::functionFilterNum()	0	static
-Screen1ViewBase.hpp:86:18:virtual void Screen1ViewBase::functionFilterTypeChannel()	0	static
-Screen1ViewBase.hpp:91:18:virtual void Screen1ViewBase::functionFilterStLoop()	0	static
-Screen1ViewBase.hpp:96:18:virtual void Screen1ViewBase::functionFilterUnit()	0	static
-Screen1ViewBase.hpp:101:18:virtual void Screen1ViewBase::functionFilterThreshold()	0	static
-Screen1ViewBase.hpp:106:18:virtual void Screen1ViewBase::functionFilterErr()	0	static
-Screen1ViewBase.hpp:111:18:virtual void Screen1ViewBase::functionFilterGas()	0	static
+Screen1ViewBase.hpp:32:18:virtual void Screen1ViewBase::functionFilterDate()	0	static
+Screen1ViewBase.hpp:37:18:virtual void Screen1ViewBase::functionReadLog()	0	static
+Screen1ViewBase.hpp:42:18:virtual void Screen1ViewBase::functionPageBack()	0	static
+Screen1ViewBase.hpp:47:18:virtual void Screen1ViewBase::functionPageForward()	0	static
+Screen1ViewBase.hpp:52:18:virtual void Screen1ViewBase::functionPage_1()	0	static
+Screen1ViewBase.hpp:57:18:virtual void Screen1ViewBase::functionPage_2()	0	static
+Screen1ViewBase.hpp:62:18:virtual void Screen1ViewBase::functionPage_3()	0	static
+Screen1ViewBase.hpp:67:18:virtual void Screen1ViewBase::functionPage_4()	0	static
+Screen1ViewBase.hpp:72:18:virtual void Screen1ViewBase::functionPage_5()	0	static
+Screen1ViewBase.hpp:77:18:virtual void Screen1ViewBase::functionOkFilDataTime()	0	static
+Screen1ViewBase.hpp:82:18:virtual void Screen1ViewBase::functionFilterNum()	0	static
+Screen1ViewBase.hpp:87:18:virtual void Screen1ViewBase::functionFilterTypeChannel()	0	static
+Screen1ViewBase.hpp:92:18:virtual void Screen1ViewBase::functionFilterStLoop()	0	static
+Screen1ViewBase.hpp:97:18:virtual void Screen1ViewBase::functionFilterUnit()	0	static
+Screen1ViewBase.hpp:102:18:virtual void Screen1ViewBase::functionFilterThreshold()	0	static
+Screen1ViewBase.hpp:107:18:virtual void Screen1ViewBase::functionFilterErr()	0	static
+Screen1ViewBase.hpp:112:18:virtual void Screen1ViewBase::functionFilterGas()	0	static
+Screen1ViewBase.hpp:117:18:virtual void Screen1ViewBase::functionFilterDate_Type2()	0	static
+Screen1ViewBase.hpp:122:18:virtual void Screen1ViewBase::functionFilterNum_Type2()	0	static
+Screen1ViewBase.hpp:127:18:virtual void Screen1ViewBase::functionFilterUnit_Type2()	0	static
+Screen1ViewBase.hpp:132:18:virtual void Screen1ViewBase::functionFilterGas_Type2()	0	static
+Screen1ViewBase.hpp:137:18:virtual void Screen1ViewBase::functionTurnLog1()	0	static
+Screen1ViewBase.hpp:142:18:virtual void Screen1ViewBase::functionTurnLog2()	0	static
 ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	0	static
 BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	0	static
 BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
@@ -72,20 +78,21 @@ TwoWildcardTextButtonStyle.hpp:52:7:virtual touchgfx::TwoWildcardTextButtonStyle
 TextButtonStyle.hpp:43:7:virtual touchgfx::TextButtonStyle<touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger> >::~TextButtonStyle()	8	static
 WildcardTextButtonStyle.hpp:51:7:virtual touchgfx::WildcardTextButtonStyle<touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger> >::~WildcardTextButtonStyle()	8	static
 DrawableList.hpp:82:23:touchgfx::Drawable* touchgfx::DrawableListItems<TYPE, SIZE>::getDrawable(int16_t) [with TYPE = ListTile; int SIZE = 16]	8	static
-Screen1ViewBase.cpp:370:6:virtual void Screen1ViewBase::setupScreen()	8	static
+Screen1ViewBase.cpp:566:6:virtual void Screen1ViewBase::setupScreen()	8	static
 AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
-Screen1ViewBase.cpp:402:6:void Screen1ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	0	static
+Screen1ViewBase.cpp:608:6:void Screen1ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	0	static
 ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	16	static
-Screen1ViewBase.cpp:391:6:void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+Screen1ViewBase.cpp:597:6:void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
 Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 Drawable.hpp:326:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 Drawable.hpp:394:10:void touchgfx::Drawable::setWidthHeight(int16_t, int16_t)	16	static
 Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 Box.hpp:33:5:touchgfx::Box::Box()	8	static
+ListLayout.hpp:48:5:touchgfx::ListLayout::ListLayout(touchgfx::Direction)	16	static
 TextArea.hpp:42:5:touchgfx::TextArea::TextArea()	8	static
 ConfigListFilterLog.hpp:12:13:ConfigListFilterLog::~ConfigListFilterLog()	8	static
-Screen1ViewBase.hpp:25:13:Screen1ViewBase::~Screen1ViewBase()	8	static
-Screen1ViewBase.hpp:25:13:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
+Screen1ViewBase.hpp:26:13:Screen1ViewBase::~Screen1ViewBase()	8	static
+Screen1ViewBase.hpp:26:13:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
 ConfigListFilterLog.hpp:12:13:virtual ConfigListFilterLog::~ConfigListFilterLog()	8	static
 BoxWithBorderButtonStyle.hpp:94:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderColors(touchgfx::colortype, touchgfx::colortype, touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::ClickButtonTrigger]	4	static
 TextButtonStyle.hpp:57:10:void touchgfx::TextButtonStyle<T>::setText(touchgfx::TypedText) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
@@ -94,7 +101,7 @@ WildcardTextButtonStyle.hpp:142:10:void touchgfx::WildcardTextButtonStyle<T>::se
 TwoWildcardTextButtonStyle.hpp:66:10:void touchgfx::TwoWildcardTextButtonStyle<T>::setTwoWildcardText(touchgfx::TypedText) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
 TwoWildcardTextButtonStyle.hpp:153:10:void touchgfx::TwoWildcardTextButtonStyle<T>::setTwoWildcardTextColors(touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	0	static
 BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
-TwoWildcardTextButtonStyle.hpp:55:5:touchgfx::TwoWildcardTextButtonStyle<T>::TwoWildcardTextButtonStyle() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
 WildcardTextButtonStyle.hpp:54:5:touchgfx::WildcardTextButtonStyle<T>::WildcardTextButtonStyle() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
+TwoWildcardTextButtonStyle.hpp:55:5:touchgfx::TwoWildcardTextButtonStyle<T>::TwoWildcardTextButtonStyle() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
 TextButtonStyle.hpp:46:5:touchgfx::TextButtonStyle<T>::TextButtonStyle() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
-Screen1ViewBase.cpp:9:1:Screen1ViewBase::Screen1ViewBase()	240	static
+Screen1ViewBase.cpp:9:1:Screen1ViewBase::Screen1ViewBase()	344	static
