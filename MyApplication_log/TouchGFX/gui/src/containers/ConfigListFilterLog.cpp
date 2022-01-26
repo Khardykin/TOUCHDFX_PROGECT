@@ -201,7 +201,10 @@ void ConfigListFilterLog::scrollListItemSelectedHandler(int16_t itemSelected)
 			scrollListListItems[i].setUnselected();
 		}
 
-		if((currentIndex == 0) && (itemSelected == scrollListListItems[i].getIndex())){
+		if((currentIndex == 0) && (
+				((0 == scrollListListItems[i].getIndex()) && (list_id != ListID::list_channel)) ||
+				((32 == scrollListListItems[i].getIndex()) && (list_id == ListID::list_channel))
+				)){
 			scrollListListItems[i].setSelected(scrollList.getWidth());
 		}
 	}
