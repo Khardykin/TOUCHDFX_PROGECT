@@ -12,14 +12,14 @@ CustomContainerKeyboard_Num::CustomContainerKeyboard_Num()
 
 void CustomContainerKeyboard_Num::keyboard_mas_from_cp1251_to_utf8(
 		char *data_cp1251, Unicode::UnicodeChar *data_utf8, uint16_t len) {
-//	for (uint16_t i = 0; i < len; i++) {
-//		if (data_cp1251[i] >= 0xC0) {
-//			data_utf8[i] = (data_cp1251[i] - 0xC0) + 0x0410;
-//		}
-//		else {
-//			data_utf8[i] = data_cp1251[i];
-//		}
-//	}
+	for (uint16_t i = 0; i < len; i++) {
+		if (data_cp1251[i] >= 0xC0) {
+			data_utf8[i] = (data_cp1251[i] - 0xC0) + 0x0410;
+		}
+		else {
+			data_utf8[i] = data_cp1251[i];
+		}
+	}
 }
 
 void CustomContainerKeyboard_Num::initialize()
@@ -31,23 +31,23 @@ void CustomContainerKeyboard_Num::initialize()
 
 //==================================================================================================================
 void CustomContainerKeyboard_Num::UpdateButtonKeyboard() {
-//	Unicode::UnicodeChar keyboard_mas[12];
+	Unicode::UnicodeChar keyboard_mas[12];
 
-//	keyboard_mas_from_cp1251_to_utf8((char*) button_123_mas,
-//						&keyboard_mas[0], sizeof(button_123_mas));
+	keyboard_mas_from_cp1251_to_utf8((char*) button_123_mas,
+						&keyboard_mas[0], sizeof(button_123_mas));
 //
-//	customContainerButton_key1.initialize_my(keyboard_mas[0]);
-//	customContainerButton_key2.initialize_my(keyboard_mas[1]);
-//	customContainerButton_key3.initialize_my(keyboard_mas[2]);
-//	customContainerButton_key4.initialize_my(keyboard_mas[3]);
-//	customContainerButton_key5.initialize_my(keyboard_mas[4]);
-//	customContainerButton_key6.initialize_my(keyboard_mas[5]);
-//	customContainerButton_key7.initialize_my(keyboard_mas[6]);
-//	customContainerButton_key8.initialize_my(keyboard_mas[7]);
-//	customContainerButton_key9.initialize_my(keyboard_mas[8]);
-//	customContainerButton_key10.initialize_my(keyboard_mas[9]);
-//	customContainerButton_key11.initialize_my(keyboard_mas[10]);
-//	customContainerButton_key12.initialize_my(keyboard_mas[11]);
+	customContainerButton_key1.initialize_my(keyboard_mas[0]);
+	customContainerButton_key2.initialize_my(keyboard_mas[1]);
+	customContainerButton_key3.initialize_my(keyboard_mas[2]);
+	customContainerButton_key4.initialize_my(keyboard_mas[3]);
+	customContainerButton_key5.initialize_my(keyboard_mas[4]);
+	customContainerButton_key6.initialize_my(keyboard_mas[5]);
+	customContainerButton_key7.initialize_my(keyboard_mas[6]);
+	customContainerButton_key8.initialize_my(keyboard_mas[7]);
+	customContainerButton_key9.initialize_my(keyboard_mas[8]);
+	customContainerButton_key10.initialize_my(keyboard_mas[9]);
+	customContainerButton_key11.initialize_my(keyboard_mas[10]);
+	customContainerButton_key12.initialize_my(keyboard_mas[11]);
 }
 
 //==================================================================================================================
@@ -56,7 +56,7 @@ void CustomContainerKeyboard_Num::UpdateText() {
 			data_ContainerTextArea);
 	touchgfx_printf("action1 %s, %d\n\r", textArea1Buffer, count_ContainerTextArea);
 
-	if(count_ContainerTextArea == 1){
+	if(count_ContainerTextArea == 2){
 		if((textArea1Buffer[1] == button_123_mas[9]) || (textArea1Buffer[1] == button_123_mas[11])){
 			count_ContainerTextArea = 0;
 		}

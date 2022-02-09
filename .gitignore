@@ -1,0 +1,8 @@
+
+*.hex
+*.elf
+*.o
+*.su
+*.touchgfx
+*.map
+*.list
